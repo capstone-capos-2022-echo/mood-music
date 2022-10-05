@@ -6,7 +6,8 @@
 - $ `rails new mood-music -d postgresql -T`
 - $ `cd mood-music`
 - $ `rails db:create`
-- $ `rails s`
+- $ `bundle add rspec-rails`
+- $ `rails g rspec:install`
 
 #### Add React to Rails
 - $ `bundle add webpacker`
