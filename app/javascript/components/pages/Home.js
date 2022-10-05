@@ -1,8 +1,14 @@
 import React from 'react'
+import {Button} from 'reactstrap'
 
 const Home = () => {
    return (
-      <div>Home</div>
+      <div>
+         <h2>What are you in the mood for?</h2>
+            <Button href="/">
+               Pick A Mood
+            </Button>
+      </div>
    )
 }
 
