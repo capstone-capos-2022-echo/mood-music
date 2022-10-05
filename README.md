@@ -1,6 +1,6 @@
 # Mood Music
 
-### React IN Rails Setup
+## React IN Rails Setup
 
 #### Create the Rails App
 - $ `rails new mood-music -d postgresql -T`
@@ -50,3 +50,13 @@
 - $ `rails generate devise:install`
 - $ `rails generate devise User`
 - $ `rails db:migrate`
+
+
+## Backend
+
+#### Database Schemas and Seeds
+- Generate a resource for Song:
+$ `rails g resource Song title:string artist:string album:string mood:string album_art:text song_link:text`
+- Make active record associations between User and Song models
+   - user has_many songs, songs belong_to user
+- Create a seeds file of songs
