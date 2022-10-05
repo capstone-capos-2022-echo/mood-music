@@ -7,6 +7,22 @@ import Navigation from "./Navigation"
 describe("<Navigation />", () => {
    it("renders without crashing", () => {
       const div = document.createElement("div")
-      expect().toBeInTheDocument()
+      render(
+         <BrowserRouter>
+            <Navigation />
+         </BrowserRouter>,
+         div
+      )
+   })
+   it("has clickable links", () => {
+      render(
+         <BrowserRouter>
+            <Navigation />
+         </BrowserRouter>
+      )
+      userEvent.click(screen.getByText("Mood Music"))
+      expect(screen.getByText("Mood Music")).toBeInTheDocument()
+      userEvent.click(screen.getByText("Who We Are"))
+      expect(screen.getByText("Who We Are")).toBeInTheDocument()
    })
 })

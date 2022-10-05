@@ -15,20 +15,20 @@ const Navigation = ({
             <Nav>
                <NavItem>
                   <NavLink to = "/" className="nav-link">
-                     Mood Music
+                     Müd Müzik
                   </NavLink>
                </NavItem>
             </Nav>
             <Nav>
                <NavItem>
                   <NavLink to = "/" className="nav-link">
-                     Who we are
+                     Who We Are
                   </NavLink>
                </NavItem>
                {!logged_in && (
                   <NavItem>
                      <a href={sign_in_route} className="nav-link">
-                        Log in
+                        Log In
                      </a>
                   </NavItem>
                )}
@@ -42,7 +42,7 @@ const Navigation = ({
                {logged_in && (
                   <NavItem>
                      <NavLink to = "/" className="nav-link">
-                        Added Songs
+                        Song Contributions
                      </NavLink>
                   </NavItem>
                )}
