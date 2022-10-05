@@ -70,5 +70,26 @@ RSpec.describe Song, type: :model do
     )
     expect(song.errors[:song_link]).to include "can't be blank"
   end 
+  it 'should have at unique value for title for each artist' do
+    song = user.songs.create(
+      title:"Joes song",
+      artist: "Joe",
+      album: "Joes album",
+      mood: "calm",
+      album_art: "image.com",
+      song_link: "youtube.com", 
+      user_id: 1
+    )
+    song_two = user.songs.create(
+      title:"Joes song",
+      artist: "Joe",
+      album: "Joes album",
+      mood: "calm",
+      album_art: "image.com",
+      song_link: "youtube.com", 
+      user_id: 1
+    )
+    expect(song_two.errors[:title]).to include "has already been taken"
+  end 
 end
 
