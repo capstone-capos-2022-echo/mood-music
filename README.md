@@ -59,4 +59,5 @@
 $ `rails g resource Song title:string artist:string album:string mood:string album_art:text song_link:text`
 - Make active record associations between User and Song models
    - user has_many songs, songs belong_to user
+- Migration to add user_id column to songs
 - Create a seeds file of songs
