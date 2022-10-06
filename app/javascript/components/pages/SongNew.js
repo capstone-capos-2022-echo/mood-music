@@ -78,13 +78,13 @@ const SongNew = ( {createSong} ) => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="album_art">Profile Pic</Label>
-          <Input type="url" name="album_art" placeholder='place url' onChange={handleChange} value={newSong.album_art} />
+          <Label for="album_art">Album Art</Label>
+          <Input type="url" name="album_art" placeholder='place art url' onChange={handleChange} value={newSong.album_art} />
         </FormGroup>
 
         <FormGroup>
           <Label for="song_link">Link to song</Label>
-          <Input type="url" name="song_link" placeholder='place url' onChange={handleChange} value={newSong.song_link} />
+          <Input type="url" name="song_link" placeholder='place song url' onChange={handleChange} value={newSong.song_link} />
         </FormGroup>
 
         <Button onClick={handleSubmit} name="submit">
