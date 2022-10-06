@@ -13,13 +13,22 @@ class SongsController < ApplicationController
       end
    end
 
-   def update 
+   def update
       song = Song.find(params[:id])
       song.update(song_params)
       if song.valid?
          render json: song
       else
          render json: song.errors, status:422
+      end
+   end
+
+   def destroy
+      song = Song.find(params[:id])
+      if song.destroy
+         render json: song, status: 204
+      else
+         render json: song.errors
       end
    end
 
