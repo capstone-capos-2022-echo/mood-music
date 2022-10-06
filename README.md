@@ -1,4 +1,4 @@
-# Mood Music
+# 🎶 Müd Müzik 🎶
 
 ## React IN Rails Setup
 
@@ -51,9 +51,6 @@
 - $ `rails generate devise:install`
 - $ `rails generate devise User`
 - $ `rails db:migrate`
-
-
-## Backend
 
 #### Database Schemas and Seeds
 - Generate a resource for Song:
