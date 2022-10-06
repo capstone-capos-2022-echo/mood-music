@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card} from 'reactstrap'
+import {Card, CardBody, CardTitle, CardSubtitle, CardText} from 'reactstrap'
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
 
 const AboutUs = () => {
@@ -27,6 +27,7 @@ const AboutUs = () => {
             <CardText>
                 Description goes here
             </CardText>
+            {/* Populate with links to socials */}
                 <a><AiFillGithub/></a>
                 <a><AiFillLinkedin/></a>
         </CardBody>
@@ -53,6 +54,7 @@ const AboutUs = () => {
             <CardText>
                 Description goes here
             </CardText>
+            {/* Populate with links to socials */}
                 <a><AiFillGithub/></a>
                 <a><AiFillLinkedin/></a>
         </CardBody>
@@ -79,6 +81,7 @@ const AboutUs = () => {
             <CardText>
                 Description goes here
             </CardText>
+                {/* Populate with links to socials */}
                 <a><AiFillGithub/></a>
                 <a><AiFillLinkedin/></a>
         </CardBody>
