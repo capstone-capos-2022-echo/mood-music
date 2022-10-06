@@ -207,7 +207,176 @@ RSpec.describe "Songs", type: :request do
 
       expect(json['user_id']).to include "can't be blank"
     end
-
   end
+  describe "PATCH /update" do
+    it 'edits a song for a user' do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+      song_params = {
+          song:{
+          title:"Your song"
+        }
+      }
+
+      patch "/songs/#{song.id}", params: song_params
+    
+      song = Song.first 
+
+      expect(response).to have_http_status(200)
+
+      expect(song.title).to eq 'Your song'
+    end
+   
+    it 'edits an artist for a user' do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+      song_params = {
+          song:{
+          artist:"Me"
+        }
+      }
+
+      patch "/songs/#{song.id}", params: song_params
+    
+      song = Song.first 
+
+      expect(response).to have_http_status(200)
+
+      expect(song.artist).to eq 'Me'
+    end
+   
+    it 'edits am artist for a user' do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+      song_params = {
+          song:{
+          artist:"Me"
+        }
+      }
+
+      patch "/songs/#{song.id}", params: song_params
+    
+      song = Song.first 
+
+      expect(response).to have_http_status(200)
+
+      expect(song.artist).to eq 'Me'
+    end
+   
+    it 'edits an album for a user' do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+      song_params = {
+          song:{
+          album:"Me Album"
+        }
+      }
+
+      patch "/songs/#{song.id}", params: song_params
+    
+      song = Song.first 
+
+      expect(response).to have_http_status(200)
+
+      expect(song.album).to eq 'Me Album'
+    end
+   
+    it 'edits a mood for a user' do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+      song_params = {
+          song:{
+          mood:"Me"
+        }
+      }
+
+      patch "/songs/#{song.id}", params: song_params
+    
+      song = Song.first 
+
+      expect(response).to have_http_status(200)
+
+      expect(song.mood).to eq 'Me'
+    end
+   
+    it 'edits album_art for a users song' do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+      song_params = {
+          song:{
+          album_art:"Me"
+        }
+      }
+
+      patch "/songs/#{song.id}", params: song_params
+    
+      song = Song.first 
+
+      expect(response).to have_http_status(200)
+
+      expect(song.album_art).to eq 'Me'
+    end
+   
+    it 'edits a users song_link ' do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+      song_params = {
+          song:{
+          song_link:"Me"
+        }
+      }
+
+      patch "/songs/#{song.id}", params: song_params
+    
+      song = Song.first 
+
+      expect(response).to have_http_status(200)
+
+      expect(song.song_link).to eq 'Me'
+    end
+  end
+
 end
 
