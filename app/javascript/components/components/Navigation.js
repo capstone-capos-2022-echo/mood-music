@@ -48,6 +48,13 @@ const Navigation = ({
                )}
                {logged_in && (
                   <NavItem>
+                     <NavLink to = "/songnew" className="nav-link">
+                        Add A Song
+                     </NavLink>
+                  </NavItem>
+               )}
+               {logged_in && (
+                  <NavItem>
                      <a href={sign_out_route} className="nav-link">
                         Sign Out
                      </a>
