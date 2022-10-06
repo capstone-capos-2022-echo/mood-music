@@ -1,11 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe "Songs", type: :request do
-  let(:user) do 
+  let(:user) do
     User.create email: 'test@example.com', password: 'password', password_confirmation:'password'
   end
 
 # -------Index------
+
   describe "GET /index" do
     it "gets all the songs" do
       user.songs.create(
@@ -16,14 +17,13 @@ RSpec.describe "Songs", type: :request do
         album_art: "image.com",
         song_link: "youtube.com"
       )
-      
+
       get '/songs'
-      
+
       songs = JSON.parse(response.body)
       expect(songs.length).to eq 1
       expect(response).to have_http_status(200)
-      
-      
+
       song = songs.first
       expect(song['title']).to eq 'Joes song'
       expect(song['artist']).to eq 'Joe'
@@ -35,10 +35,10 @@ RSpec.describe "Songs", type: :request do
     end
   end
 
-  #----Create----
+# -------Create------
+
   describe "POST /create" do
     it 'creates a song for a user' do
-
       song_params = {
           song:{
           title: "Our song",
@@ -54,7 +54,7 @@ RSpec.describe "Songs", type: :request do
       post '/songs', params: song_params
 
       song = Song.last
-      
+
       expect(response).to have_http_status(200)
       expect(song['title']).to eq 'Our song'
       expect(song['artist']).to eq 'You'
@@ -81,7 +81,6 @@ RSpec.describe "Songs", type: :request do
       expect(response.status).to eq 422
 
       json = JSON.parse(response.body)
-
       expect(json['title']).to include "can't be blank"
     end
 
@@ -102,7 +101,6 @@ RSpec.describe "Songs", type: :request do
       expect(response.status).to eq 422
 
       json = JSON.parse(response.body)
-
       expect(json['artist']).to include "can't be blank"
     end
 
@@ -123,9 +121,9 @@ RSpec.describe "Songs", type: :request do
       expect(response.status).to eq 422
 
       json = JSON.parse(response.body)
-
       expect(json['album']).to include "can't be blank"
     end
+
     it 'creates a song for a user' do
       song_params = {
           song:{
@@ -143,9 +141,9 @@ RSpec.describe "Songs", type: :request do
       expect(response.status).to eq 422
 
       json = JSON.parse(response.body)
-
       expect(json['mood']).to include "can't be blank"
     end
+
     it 'creates a song for a user' do
       song_params = {
           song:{
@@ -163,7 +161,6 @@ RSpec.describe "Songs", type: :request do
       expect(response.status).to eq 422
 
       json = JSON.parse(response.body)
-
       expect(json['album_art']).to include "can't be blank"
     end
 
@@ -184,9 +181,9 @@ RSpec.describe "Songs", type: :request do
       expect(response.status).to eq 422
 
       json = JSON.parse(response.body)
-
       expect(json['song_link']).to include "can't be blank"
     end
+
     it 'creates a song for a user' do
       song_params = {
           song:{
@@ -204,12 +201,14 @@ RSpec.describe "Songs", type: :request do
       expect(response.status).to eq 422
 
       json = JSON.parse(response.body)
-
       expect(json['user_id']).to include "can't be blank"
     end
   end
+
+# -------Update------
+
   describe "PATCH /update" do
-    it 'edits a song for a user' do
+    it 'edits a song title for a user' do
       song = user.songs.create(
         title:"Our song",
         artist:"You",
@@ -225,14 +224,13 @@ RSpec.describe "Songs", type: :request do
       }
 
       patch "/songs/#{song.id}", params: song_params
-    
-      song = Song.first 
+
+      song = Song.first
 
       expect(response).to have_http_status(200)
-
       expect(song.title).to eq 'Your song'
     end
-   
+
     it 'edits an artist for a user' do
       song = user.songs.create(
         title:"Our song",
@@ -249,14 +247,13 @@ RSpec.describe "Songs", type: :request do
       }
 
       patch "/songs/#{song.id}", params: song_params
-    
-      song = Song.first 
+
+      song = Song.first
 
       expect(response).to have_http_status(200)
-
       expect(song.artist).to eq 'Me'
     end
-   
+
     it 'edits am artist for a user' do
       song = user.songs.create(
         title:"Our song",
@@ -273,14 +270,13 @@ RSpec.describe "Songs", type: :request do
       }
 
       patch "/songs/#{song.id}", params: song_params
-    
-      song = Song.first 
+
+      song = Song.first
 
       expect(response).to have_http_status(200)
-
       expect(song.artist).to eq 'Me'
     end
-   
+
     it 'edits an album for a user' do
       song = user.songs.create(
         title:"Our song",
@@ -297,14 +293,13 @@ RSpec.describe "Songs", type: :request do
       }
 
       patch "/songs/#{song.id}", params: song_params
-    
-      song = Song.first 
+
+      song = Song.first
 
       expect(response).to have_http_status(200)
-
       expect(song.album).to eq 'Me Album'
     end
-   
+
     it 'edits a mood for a user' do
       song = user.songs.create(
         title:"Our song",
@@ -321,14 +316,13 @@ RSpec.describe "Songs", type: :request do
       }
 
       patch "/songs/#{song.id}", params: song_params
-    
-      song = Song.first 
+
+      song = Song.first
 
       expect(response).to have_http_status(200)
-
       expect(song.mood).to eq 'Me'
     end
-   
+
     it 'edits album_art for a users song' do
       song = user.songs.create(
         title:"Our song",
@@ -345,14 +339,13 @@ RSpec.describe "Songs", type: :request do
       }
 
       patch "/songs/#{song.id}", params: song_params
-    
-      song = Song.first 
+
+      song = Song.first
 
       expect(response).to have_http_status(200)
-
       expect(song.album_art).to eq 'Me'
     end
-   
+
     it 'edits a users song_link ' do
       song = user.songs.create(
         title:"Our song",
@@ -369,14 +362,34 @@ RSpec.describe "Songs", type: :request do
       }
 
       patch "/songs/#{song.id}", params: song_params
-    
-      song = Song.first 
+
+      song = Song.first
 
       expect(response).to have_http_status(200)
-
       expect(song.song_link).to eq 'Me'
     end
   end
 
-end
+# -------Delete------
 
+  describe "DELETE /destroy" do
+    it "deletes a user's song" do
+      song = user.songs.create(
+        title:"Our song",
+        artist:"You",
+        album:"Your album",
+        mood:"fury",
+        album_art: "image.com",
+        song_link:"youtube.com"
+      )
+
+      delete "/songs/#{song.id}"
+
+      expect(response.status).to eq(204)
+
+      songs = Song.all
+      expect(songs).to be_empty
+    end
+  end
+
+end
