@@ -20,8 +20,8 @@ describe("<Navigation />", () => {
             <Navigation />
          </BrowserRouter>
       )
-      userEvent.click(screen.getByText("Mood Music"))
-      expect(screen.getByText("Mood Music")).toBeInTheDocument()
+      userEvent.click(screen.getByText("Müd Müzik"))
+      expect(screen.getByText("Müd Müzik")).toBeInTheDocument()
       userEvent.click(screen.getByText("Who We Are"))
       expect(screen.getByText("Who We Are")).toBeInTheDocument()
    })
