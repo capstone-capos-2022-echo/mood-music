@@ -5,6 +5,7 @@ import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
 const AboutUs = () => {
   return (
     <div>
+        <h1>Who We Are:</h1>
         <Card
         style={{
             width: '18rem'
