@@ -5,7 +5,7 @@ const Home = () => {
    return (
       <div>
          <h2>What are you in the mood for?</h2>
-            <Button href="/">
+            <Button href="/moods">
                Pick A Mood
             </Button>
       </div>
