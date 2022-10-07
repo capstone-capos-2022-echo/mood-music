@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navigation from "./components/Navigation"
 import Home from "./pages/Home"
 import MoodIndex from './pages/MoodIndex'
-import SongNew from './pages/SongNew
+import SongNew from './pages/SongNew'
+import ProtectedSongIndex from './pages/ProtectedSongIndex'
 
 const App = (props) => {
 
@@ -66,6 +67,7 @@ const App = (props) => {
         <Route path="/" element={<Home />} />
         <Route path="/moods" element={<MoodIndex />} />
         <Route path="/songnew" element={<SongNew />} />
+        <Route path="/songcontributions" element={<ProtectedSongIndex songs={song} {...props}/>} />
       </Routes>
     </BrowserRouter>
   )
