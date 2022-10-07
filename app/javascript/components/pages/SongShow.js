@@ -1,6 +1,6 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import { Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap'
+import { NavLink, useParams } from 'react-router-dom'
+import { Button, Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap'
 import YoutubeEmbed from '../components/YoutubeEmbed'
 
 const SongShow = ({songs}) => {
@@ -9,7 +9,12 @@ const SongShow = ({songs}) => {
 
    return (
       <>
-         {/* <YoutubeEmbed embedId={embedId} /> */}
+         <NavLink to={`/moods/${song.mood}`}>
+            <Button>
+               Back to Songs
+            </Button>
+         </NavLink>
+         <YoutubeEmbed songs={songs} embedId={song.song_link} />
          <Card style={{width: '18rem'}}>
             <img alt="album art" src={song.album_art}/>
             <CardBody>

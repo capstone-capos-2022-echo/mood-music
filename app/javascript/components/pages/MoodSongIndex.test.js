@@ -25,7 +25,4 @@ describe("<MoodSongIndex/>",()=>{
 
       expect(moodButton).toBeInTheDocument()
    })
-
-
-
 })
