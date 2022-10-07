@@ -1,7 +1,6 @@
-user = User.where(email: 'test@example.com').first_or_create(password: 'password', password_confirmation: 'password')
-
-song_seeds = [
+const songs = [
    {
+      id: 1,
       title: "Burning",
       artist: "The Whitest Boy Alive",
       album: "Dreams",
@@ -10,6 +9,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/LvwBDCb7bmM"
    },
    {
+      id: 2,
       title: "Katawaredoki",
       artist: "RADWIMPS",
       album: "Your Name.",
@@ -18,6 +18,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/mhpRipG9Zss&ab"
    },
    {
+      id: 3,
       title: "On Sight",
       artist: "Kanye West",
       album: "Yeezus",
@@ -26,6 +27,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/uU9Fe-WXew4"
    },
    {
+      id: 4,
       title: "UGH!",
       artist: "BTS",
       album: "MAP OF THE SOUL: 7",
@@ -34,6 +36,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/1yxEmmYQdl8"
    },
    {
+      id: 5,
       title: "Malibu Nights",
       artist: "LANY",
       album: "Malibu Nights",
@@ -42,6 +45,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/KdcPzDNHX74&ab"
    },
    {
+      id: 6,
       title: "Not U",
       artist: "HOMESHAKE",
       album: "Fresh Air",
@@ -50,6 +54,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/H7lxPn9ctC8"
    },
    {
+      id: 7,
       title: "Bfg Division",
       artist: "Mick Gordon",
       album: "Doom (Original Game Soundtrack)",
@@ -58,6 +63,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/o6y6chb0Qq8"
    },
    {
+      id: 8,
       title: "Till I Collapse",
       artist: "Eminem, Nate Dogg",
       album: "The Enimen Show",
@@ -66,6 +72,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/Obim8BYGnOE"
    },
    {
+      id: 9,
       title: "Breathe Deeper",
       artist: "Tame Impala",
       album: "The Slow Rush",
@@ -74,6 +81,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/UTwlmgV3pEI"
    },
    {
+      id: 10,
       title: "The Passenger",
       artist: "Iggy Pop",
       album: "Lust for Life",
@@ -82,6 +90,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/-fWw7FE9tTo"
    },
    {
+      id: 11,
       title: "Awakening",
       artist: "Jennifer Thomas",
       album: "The Fire Within",
@@ -90,6 +99,7 @@ song_seeds = [
       song_link: "https://www.youtube.com/embed/Fjidp4TpoSM&ab"
    },
    {
+      id: 12,
       title: "Leaving Caladan",
       artist: "Hans Zimmer",
       album: "Dune (Original Motion Picture Soundtrack)",
@@ -99,6 +109,4 @@ song_seeds = [
    }
 ]
 
-song_seeds.each do |song|
-   user.songs.create(song)
-end
+export default songs

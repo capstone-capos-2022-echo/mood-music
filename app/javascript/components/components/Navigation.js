@@ -41,7 +41,7 @@ const Navigation = ({
                )}
                {logged_in && (
                   <NavItem>
-                     <NavLink to = "/" className="nav-link">
+                     <NavLink to = "/songcontributions" className="nav-link">
                         Song Contributions
                      </NavLink>
                   </NavItem>
