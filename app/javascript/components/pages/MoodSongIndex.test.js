@@ -1,29 +1,29 @@
 import React from 'react'
 import {screen, render} from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
-import MoodIndex from "./MoodIndex"
+import MoodSongIndex from "./MoodSongIndex"
 
 
-describe("<MoodIndex/>",()=>{
+describe("<MoodSongIndex/>",()=>{
    it("renders without crashing", () => {
       const div = document.createElement("div")
       render(
          <BrowserRouter>
-            <MoodIndex />
+            <MoodSongIndex />
          </BrowserRouter>,
          div
       )
    })
-   it("has mood header", ()=>{
+   it("has back to moods button", ()=>{
       render(
          <BrowserRouter>
-            <MoodIndex />
+            <MoodSongIndex />
          </BrowserRouter>
       )
 
-      const mood = screen.getByText(/Moods/i)
+      const moodButton = screen.getByText(/Back to Moods/i)
 
-      expect(mood).toBeInTheDocument()
+      expect(moodButton).toBeInTheDocument()
    })
 
 
