@@ -26,9 +26,11 @@ const MoodSongIndex = ({songs}) => {
                      {song.artist}
                      <br/>{song.album}
                   </CardSubtitle>
-                  <Button>
-                     Song Details
-                  </Button>
+                  <NavLink to={`/songshow/${song.id}`}>
+                     <Button>
+                        Song Details
+                     </Button>
+                  </NavLink>
                </CardBody>
             </Card>
             )
