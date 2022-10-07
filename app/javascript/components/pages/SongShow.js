@@ -9,7 +9,7 @@ const SongShow = ({songs}) => {
 
    return (
       <>
-         <YoutubeEmbed embedId={embedId} />
+         {/* <YoutubeEmbed embedId={embedId} /> */}
          <Card style={{width: '18rem'}}>
             <img alt="album art" src={song.album_art}/>
             <CardBody>
