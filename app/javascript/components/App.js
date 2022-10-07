@@ -3,12 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navigation from "./components/Navigation"
 import Home from "./pages/Home"
 import MoodIndex from './pages/MoodIndex'
+import MoodSongIndex from './pages/MoodSongIndex'
 import SongNew from './pages/SongNew'
 import ProtectedSongIndex from './pages/ProtectedSongIndex'
 
 const App = (props) => {
 
-  const [song, setSong] = useState([])
+  const [songs, setSongs] = useState([])
 
   useEffect(() => {
     readSong()
@@ -17,7 +18,7 @@ const App = (props) => {
   const readSong = () => {
     fetch("http://localhost:3000/songs")
     .then(response => response.json())
-    .then(payload => setSong(payload))
+    .then(payload => setSongs(payload))
     .catch(error => console.log(error))
   }
 
@@ -65,9 +66,31 @@ const App = (props) => {
       <Navigation {...props}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/moods" element={<MoodIndex />} />
-        <Route path="/songnew" element={<SongNew />} />
-        <Route path="/songcontributions" element={<ProtectedSongIndex songs={song} {...props}/>} />
+        <Route
+          path="/moods"
+          element={<MoodIndex
+            songs={songs}
+          />}
+        />
+        <Route
+          path="/moods/:mood"
+          element={<MoodSongIndex
+            songs={songs}
+          />}
+        />
+        <Route
+          path="/songnew"
+          element={<SongNew
+            createSong={createSong}
+          />}
+        />
+        <Route
+          path="/songcontributions"
+          element={<ProtectedSongIndex
+            songs={songs}
+            {...props}
+          />}
+        />
       </Routes>
     </BrowserRouter>
   )
