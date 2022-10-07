@@ -2,28 +2,19 @@ import React from 'react'
 import { Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
-const MoodIndex = () => {
+const MoodIndex = ({songs}) => {
+
+   const moodsArr = [...new Set(songs?.map(song => song.mood))]
+
    return (
       <>
+         <h1>Moods</h1>
          <div>
-            <NavLink to="/">
-               <Button>Calm</Button>
-            </NavLink>
-            <NavLink to="/">
-               <Button>Epic</Button>
-            </NavLink>
-            <NavLink to="/">
-               <Button>Fury</Button>
-            </NavLink>
-            <NavLink to="/">
-               <Button>Heartbreak</Button>
-            </NavLink>
-            <NavLink to="/">
-               <Button>Hype</Button>
-            </NavLink>
-            <NavLink to="/">
-               <Button>Upbeat</Button>
-            </NavLink>
+            {moodsArr?.sort().map((mood, index) =>
+               <NavLink to={`/moods/${mood}`}>
+                  <Button key={index}>{mood}</Button>
+               </NavLink>
+            )}
          </div>
       </>
    )
