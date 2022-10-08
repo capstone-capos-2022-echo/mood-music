@@ -6,6 +6,7 @@ import MoodIndex from './pages/MoodIndex'
 import MoodSongIndex from './pages/MoodSongIndex'
 import SongShow from './pages/SongShow'
 import SongNew from './pages/SongNew'
+import SongEdit from './pages/SongEdit'
 import ProtectedSongIndex from './pages/ProtectedSongIndex'
 
 const App = (props) => {
@@ -49,7 +50,7 @@ const App = (props) => {
     .catch(error => console.log("Song update error:", error))
   }
 
-  const deleteCSong = (id) => {
+  const deleteSong = (id) => {
     fetch(`http://localhost:3000/songs/${id}`, {
       headers: {
         "Content-Type": "application/json"
@@ -96,6 +97,14 @@ const App = (props) => {
           element={<ProtectedSongIndex
             songs={songs}
             {...props}
+          />}
+        />
+        <Route
+          path="/songedit/:id"
+          element={<SongEdit
+            songs={songs}
+            updateSong={updateSong}
+            deleteSong={deleteSong}
           />}
         />
       </Routes>
