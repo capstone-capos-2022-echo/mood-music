@@ -1,35 +1,41 @@
 import React from 'react'
-import { Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap'
-import {useParams} from 'react-router-dom'
+import { Button, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 const ProtectedSongIndex = ({songs, current_user}) => {
-    
-    const { id } = useParams()
+
     const filteredSongs = songs?.filter(song => song.user_id === current_user.id)
-    console.log(filteredSongs)
 
     return (
     <>
-    <h1>Your Contributed Songs</h1>
-    <h3>If you don't have any contributions, why not add a song?</h3>
-    {filteredSongs?.map((song, index) => {
+        <h1>Your Contributed Songs</h1>
+        <h5>If you don't have any contributions, why not add a song?</h5>
+        {filteredSongs?.map((song, index) => {
 
-        return (
-            <Card style={{width: '18rem'}} key={index}>
-            <img alt="Album Art" src={song.album_art}/>
-            <CardBody>
-                <CardTitle tag="h5">
-                    {song.title}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                    {song.artist}
-                </CardSubtitle>
-            </CardBody>
-            </Card>
-        )
+            return (
+                <div key={index}>
+                <Card style={{width: '18rem'}}>
+                    <img alt="Album Art" src={song.album_art}/>
+                    <CardBody>
+                        <CardTitle tag="h5">
+                            {song.title}
+                        </CardTitle>
+                        <CardSubtitle className="mb-2 text-muted" tag="h6">
+                            {song.artist}
+                            <br/>{song.album}
+                        </CardSubtitle>
+                    </CardBody>
+                    <NavLink to={`/songedit/${song.id}`}>
+                        <Button>
+                            Edit Song
+                        </Button>
+                    </NavLink>
+                </Card>
+                </div>
+            )
 
-        })
-    }
+            })
+        }
     </>
     )
 }

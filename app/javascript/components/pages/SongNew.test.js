@@ -2,11 +2,6 @@ import React from 'react'
 import { screen, render } from '@testing-library/react'
 import SongNew from './SongNew'
 import { BrowserRouter } from 'react-router-dom'
-import { Placeholder } from 'reactstrap'
-
-
-
-
 
 describe("<SongNew/>", () => {
     it("SongNew renders without error", () =>{
@@ -22,10 +17,10 @@ describe("<SongNew/>", () => {
     it(" has multiple input fields on the form", () => {
         render(
             <BrowserRouter>
-            <SongNew/>
+                <SongNew/>
             </BrowserRouter>
         )
-        const placeHolder = screen.getByPlaceholderText(/title/i)
+        const placeHolder = screen.getByPlaceholderText(/Song Title/i)
         expect(placeHolder).toBeInTheDocument()
     })
     it("SongNew renders without error", () =>{
@@ -41,10 +36,10 @@ describe("<SongNew/>", () => {
     it(" has multiple input fields on the form", () => {
         render(
             <BrowserRouter>
-            <SongNew/>
+                <SongNew/>
             </BrowserRouter>
         )
-        const placeHolder = screen.getByPlaceholderText(/Artist/i)
+        const placeHolder = screen.getByPlaceholderText(/Artist Name/i)
         expect(placeHolder).toBeInTheDocument()
     })
     it("SongNew renders without error", () =>{
@@ -53,17 +48,17 @@ describe("<SongNew/>", () => {
                 <SongNew/>
             </BrowserRouter>
         )
-    const heading =screen.getByText("Album Art")
+    const heading =screen.getByText("Album")
 
     expect(heading).toBeInTheDocument()
     })
     it(" has multiple input fields on the form", () => {
         render(
             <BrowserRouter>
-            <SongNew/>
+                <SongNew/>
             </BrowserRouter>
         )
-        const placeHolder = screen.getByPlaceholderText("Album name")
+        const placeHolder = screen.getByPlaceholderText("Album Name")
         expect(placeHolder).toBeInTheDocument()
     })
     it("SongNew renders without error", () =>{
@@ -72,18 +67,9 @@ describe("<SongNew/>", () => {
                 <SongNew/>
             </BrowserRouter>
         )
-    const heading =screen.getByText(/Mood/i)
+    const heading =screen.getByText(/Select the Song's Mood/i)
 
     expect(heading).toBeInTheDocument()
-    })
-    it(" has multiple input fields on the form", () => {
-        render(
-            <BrowserRouter>
-            <SongNew/>
-            </BrowserRouter>
-        )
-        const placeHolder = screen.getByText(/Mood/i)
-        expect(placeHolder).toBeInTheDocument()
     })
     it("SongNew renders without error", () =>{
         render(
@@ -98,10 +84,10 @@ describe("<SongNew/>", () => {
     it(" has multiple input fields on the form", () => {
         render(
             <BrowserRouter>
-            <SongNew/>
+                <SongNew/>
             </BrowserRouter>
         )
-        const placeHolder = screen.getByPlaceholderText(/place art url/i)
+        const placeHolder = screen.getByPlaceholderText(/Album Art Image URL/i)
         expect(placeHolder).toBeInTheDocument()
     })
     it("SongNew renders without error", () =>{
@@ -110,19 +96,17 @@ describe("<SongNew/>", () => {
                 <SongNew/>
             </BrowserRouter>
         )
-    const heading =screen.getByText(/Link to song/i)
+    const heading =screen.getByText(/Embed Link to Song/i)
 
     expect(heading).toBeInTheDocument()
     })
     it(" has multiple input fields on the form", () => {
         render(
             <BrowserRouter>
-            <SongNew/>
+                <SongNew/>
             </BrowserRouter>
         )
-        const placeHolder = screen.getByPlaceholderText(/place song url/i)
+        const placeHolder = screen.getByPlaceholderText(/Song URL/i)
         expect(placeHolder).toBeInTheDocument()
     })
 })
-
-export default SongNew.test
