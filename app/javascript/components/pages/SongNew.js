@@ -27,7 +27,8 @@ const SongNew = ( {createSong} ) => {
 
   return (
     <>
-    <Form>
+      <h2>Add a Song</h2>
+      <Form>
         <FormGroup>
           <Label for="title">Song Title</Label>
           <Input type="text" name="title" placeholder='Song Title' onChange={handleChange} value={newSong.name} />
@@ -88,12 +89,8 @@ const SongNew = ( {createSong} ) => {
         <Button onClick={handleSubmit} name="submit">
           Add Song
         </Button>
-
       </Form>
-
     </>
-
-
   )
 }
 

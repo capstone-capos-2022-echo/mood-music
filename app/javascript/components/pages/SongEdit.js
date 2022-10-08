@@ -7,7 +7,6 @@ const SongEdit = ({songs, updateSong, deleteSong}) => {
     const { id } = useParams()
     const navigate = useNavigate()
     const song = songs?.find(song => song.id === +id)
-    console.log(song)
     const [currentSong, setCurrentSong] =useState(song)
 
     const handleChange = (e) => {
@@ -23,7 +22,7 @@ const SongEdit = ({songs, updateSong, deleteSong}) => {
     const handleDelete = () => {
         deleteSong(id)
         navigate("/songcontributions")
-        console.log(currentSong);
+        console.log(currentSong)
     }
 
     return (
