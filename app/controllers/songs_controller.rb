@@ -3,9 +3,10 @@ class SongsController < ApplicationController
       songs = Song.all
       render json: songs
    end
-
+   
    def create
-      song = Song.create(song_params)
+      user = current_user
+      song = user.songs.create(song_params)
       if song.valid?
          render json: song
       else
