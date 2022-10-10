@@ -1,0 +1,47 @@
+@font-face {
+   font-family:'Major Mono Display';
+   src: url('./assets/MajorMonoDisplay-Regular.ttf');
+}
+
+@font-face {
+   font-family: 'Barlow';
+   src: url('./assets/Barlow-Light.ttf');
+}
+
+* {
+   font-family: 'Barlow', sans-serif;
+   color: white !important;
+}
+
+body{
+   background-color: rgb(0,23,31) !important;
+}
+
+.three-column-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr) ;
+   margin: 20px;
+
+}
+
+@media (max-width: 450px) {
+   .three-column-container, moods {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+.three-column-item {
+   margin: 30px;
+   display: flex;
+   justify-content: center;
+}
+
+.nav-logo {
+   font-family: 'Major Mono Display', monospace;
+   font-size: 2.3rem;
+   text-decoration: none;
+}
+
+.nav-link {
+   font-size: 1.4rem;
+}

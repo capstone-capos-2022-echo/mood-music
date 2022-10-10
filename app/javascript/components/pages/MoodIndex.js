@@ -9,11 +9,13 @@ const MoodIndex = ({songs}) => {
    return (
       <>
          <h1>Moods</h1>
-         <div>
+         <div className='three-column-container moods'>
             {moodsArr?.sort().map((mood, index) =>
-               <NavLink to={`/moods/${mood}`}>
-                  <Button key={index}>{mood}</Button>
-               </NavLink>
+               <div className='three-column-item moods'>
+                  <NavLink to={`/moods/${mood}`}>
+                     <Button key={index}>{mood}</Button>
+                  </NavLink>
+               </div>
             )}
          </div>
       </>
