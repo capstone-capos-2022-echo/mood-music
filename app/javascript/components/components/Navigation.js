@@ -21,7 +21,7 @@ const Navigation = ({
             </Nav>
             <Nav>
                <NavItem>
-                  <NavLink to = "/" className="nav-link">
+                  <NavLink to = "/aboutus" className="nav-link">
                      Who We Are
                   </NavLink>
                </NavItem>

@@ -8,6 +8,7 @@ import SongShow from './pages/SongShow'
 import SongNew from './pages/SongNew'
 import SongEdit from './pages/SongEdit'
 import ProtectedSongIndex from './pages/ProtectedSongIndex'
+import AboutUs from './pages/AboutUs'
 
 const App = (props) => {
 
@@ -68,6 +69,13 @@ const App = (props) => {
       <Navigation {...props}/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route
+          path="/moods"
+          element={<MoodIndex
+            songs={songs}
+          />}
+        />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route
           path="/moods"
           element={<MoodIndex
