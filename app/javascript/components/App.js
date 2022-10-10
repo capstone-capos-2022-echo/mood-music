@@ -6,6 +6,7 @@ import MoodIndex from './pages/MoodIndex'
 import MoodSongIndex from './pages/MoodSongIndex'
 import SongNew from './pages/SongNew'
 import ProtectedSongIndex from './pages/ProtectedSongIndex'
+import AboutUs from './pages/AboutUs'
 
 const App = (props) => {
 
@@ -66,6 +67,13 @@ const App = (props) => {
       <Navigation {...props}/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route
+          path="/moods"
+          element={<MoodIndex
+            songs={songs}
+          />}
+        />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route
           path="/moods"
           element={<MoodIndex
