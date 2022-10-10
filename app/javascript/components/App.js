@@ -33,7 +33,7 @@ const App = (props) => {
       method: "POST"
     })
     .then(response => response.json())
-    .then(payload => readSong(payload))
+    .then(payload => readSong())
     .catch(error => console.log("Song create error:", error))
   }
 
