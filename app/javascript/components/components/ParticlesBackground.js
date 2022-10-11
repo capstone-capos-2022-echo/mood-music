@@ -1,12 +1,20 @@
 import React from 'react'
 import Particles from 'react-tsparticles'
-import particlesConfig from './config/particles-config'
 
 const ParticlesBackground = () => {
   return (
-    <Particles param={particlesConfig}>
-
-    </Particles>
+    <>
+    </>
+    // <Particles
+    // options ={{
+    //   preset: "seaAnemone",
+    //   particles: {
+    //     move: {
+    //       speed: 0.5
+    //     }
+    //   }
+    // }}
+    // />
   )
 }
 
