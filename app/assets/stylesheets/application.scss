@@ -1,1 +1,53 @@
 @import "bootstrap";
+
+@font-face {
+   font-family:'Major Mono Display';
+   src: url('MajorMonoDisplay-Regular.ttf');
+}
+
+@font-face {
+   font-family: 'Barlow';
+   src: url('Barlow-Light.ttf');
+}
+
+* {
+   font-family: 'Barlow', sans-serif;
+   color: white;
+}
+
+a {
+   color: rbg(164,3,31) !important;
+   text-decoration: none;
+   margin: 0 auto;
+}
+
+body{
+   background-color: rgb(0,23,31) !important;
+}
+
+h2, form, .links {
+   margin: auto;
+}
+
+input {
+   color: black !important;
+}
+
+.devise-body {
+   display: flex !important;
+   justify-content: center !important;
+   flex-direction: column !important;
+   margin: 40px auto;
+   padding: 20px;
+   width: fit-content;
+   background-color: rgb(181, 65, 84);
+   border-radius: 25px;
+}
+
+.actions, .field, .links {
+   margin: 15px;
+}
+
+.links {
+   color: black !important;
+}
