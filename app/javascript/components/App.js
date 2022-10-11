@@ -21,14 +21,14 @@ const App = (props) => {
   }, [])
 
   const readSong = () => {
-    fetch("http://localhost:3000/songs")
+    fetch("https://mud-muzik.herokuapp.com/songs")
     .then(response => response.json())
     .then(payload => setSongs(payload))
     .catch(error => console.log(error))
   }
 
   const createSong = (song) => {
-    fetch("http://localhost:3000/songs", {
+    fetch("https://mud-muzik.herokuapp.com/songs", {
       body: JSON.stringify(song),
       headers: {
         "Content-Type": "application/json"
@@ -41,7 +41,7 @@ const App = (props) => {
   }
 
   const updateSong = (song, id) => {
-    fetch(`http://localhost:3000/songs/${id}`, {
+    fetch(`https://mud-muzik.herokuapp.com/songs/${id}`, {
       body: JSON.stringify(song),
       headers: {
         "Content-Type": "application/json"
@@ -54,7 +54,7 @@ const App = (props) => {
   }
 
   const deleteSong = (id) => {
-    fetch(`http://localhost:3000/songs/${id}`, {
+    fetch(`https://mud-muzik.herokuapp.com/songs/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
