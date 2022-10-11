@@ -5,7 +5,7 @@ import AboutUs from "./AboutUs"
 describe("<AboutUs/>", ()=>{
     it("renders without crashing", ()=>{
         render(<AboutUs/>)
-        const element = screen.getByText(/Who We Are:/i)
+        const element = screen.getByText(/Who We Are/i)
         expect(element).toBeInTheDocument()
     })
     it("cards render without crashing", ()=>{
