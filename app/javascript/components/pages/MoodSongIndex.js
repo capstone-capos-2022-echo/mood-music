@@ -14,27 +14,31 @@ const MoodSongIndex = ({songs}) => {
                Back to Moods
             </Button>
          </NavLink>
-         {filteredMoodSongs?.map((song, index) => {
-            return (
-            <Card style={{width: '18rem'}} key={index}>
-               <img alt="album art" src={song.album_art}/>
-               <CardBody>
-                  <CardTitle>
-                     {song.title}
-                  </CardTitle>
-                  <CardSubtitle className="mb-2 text-muted" tag="h6">
-                     {song.artist}
-                     <br/>{song.album}
-                  </CardSubtitle>
-                  <NavLink to={`/songshow/${song.id}`}>
-                     <Button>
-                        Song Details
-                     </Button>
-                  </NavLink>
-               </CardBody>
-            </Card>
-            )
-         })}
+         <div className='three-column-container songs'>
+            {filteredMoodSongs?.map((song, index) => {
+               return (
+                  <div className='three-column-item songs'>
+                     <Card style={{width: '18rem'}} key={index}>
+                        <img alt="album art" src={song.album_art}/>
+                        <CardBody>
+                           <CardTitle>
+                              {song.title}
+                           </CardTitle>
+                           <CardSubtitle className="mb-2 text-muted" tag="h6">
+                              {song.artist}
+                              <br/>{song.album}
+                           </CardSubtitle>
+                           <NavLink to={`/songshow/${song.id}`}>
+                              <Button>
+                                 Song Details
+                              </Button>
+                           </NavLink>
+                        </CardBody>
+                     </Card>
+                  </div>
+               )
+            })}
+         </div>
       </>
    )
 

@@ -11,10 +11,10 @@ const Navigation = ({
 }) => {
    return (
       <>
-         <Navbar>
+         <Navbar className='navbar'>
             <Nav>
                <NavItem>
-                  <NavLink to = "/" className="nav-link">
+                  <NavLink to = "/" className="nav-logo">
                      Müd Müzik
                   </NavLink>
                </NavItem>

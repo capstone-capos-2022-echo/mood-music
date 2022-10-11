@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navigation from "./components/Navigation"
 import Home from "./pages/Home"
+import NotFound from "./pages/NotFound"
 import MoodIndex from './pages/MoodIndex'
 import MoodSongIndex from './pages/MoodSongIndex'
 import SongShow from './pages/SongShow'
@@ -9,6 +10,7 @@ import SongNew from './pages/SongNew'
 import SongEdit from './pages/SongEdit'
 import ProtectedSongIndex from './pages/ProtectedSongIndex'
 import AboutUs from './pages/AboutUs'
+import './App.css'
 
 const App = (props) => {
 
@@ -114,6 +116,8 @@ const App = (props) => {
             updateSong={updateSong}
             deleteSong={deleteSong}
           />}
+        />
+        <Route path="/*" element={<NotFound />}
         />
       </Routes>
     </BrowserRouter>
