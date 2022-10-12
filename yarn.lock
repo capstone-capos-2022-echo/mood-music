@@ -8617,6 +8617,13 @@ tsparticles-particles.js@^2.3.3:
   dependencies:
     tsparticles-engine "^2.3.3"
 
+tsparticles-path-curves@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/tsparticles-path-curves/-/tsparticles-path-curves-2.3.3.tgz#e5a64706c433b5d0e15df218604d880fe21836c0"
+  integrity sha512-jf53d7OMMldWwAiM1oEUXB16Ts3DCz+xlbRMULLPY+a89dG7zzs5/AOLbV2ezrpr3CUaOhe13mwBFCFXfYSE9g==
+  dependencies:
+    tsparticles-engine "^2.3.3"
+
 tsparticles-plugin-absorbers@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/tsparticles-plugin-absorbers/-/tsparticles-plugin-absorbers-2.3.4.tgz#49f6d0570b2390fa2df19e8495d819314cd07026"
@@ -8637,6 +8644,21 @@ tsparticles-plugin-polygon-mask@^2.3.3:
   integrity sha512-EJcIBO6xhDKPa4+o2K9RaUWDWsYlwkWQin8LLMZfFAchK/77bBz7n6L/jMkMey8NIBg1TkrNhwHSLaTa24PIjQ==
   dependencies:
     tsparticles-engine "^2.3.3"
+
+tsparticles-preset-sea-anemone@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/tsparticles-preset-sea-anemone/-/tsparticles-preset-sea-anemone-2.3.4.tgz#b350f4984460a227466778fdc75ee08ea71671e6"
+  integrity sha512-DmfFpXIdqtlga93Izwe2CbmcGVuzPUXz3+3K7q8k5bO7z90juO6BTaEM4Dr2fVyRjhsAQZYdsPgnzzQOhTWiQQ==
+  dependencies:
+    tsparticles-engine "^2.3.3"
+    tsparticles-move-base "^2.3.3"
+    tsparticles-path-curves "^2.3.3"
+    tsparticles-plugin-emitters "^2.3.4"
+    tsparticles-shape-circle "^2.3.3"
+    tsparticles-updater-color "^2.3.3"
+    tsparticles-updater-opacity "^2.3.3"
+    tsparticles-updater-out-modes "^2.3.3"
+    tsparticles-updater-size "^2.3.3"
 
 tsparticles-shape-circle@^2.3.3:
   version "2.3.3"
