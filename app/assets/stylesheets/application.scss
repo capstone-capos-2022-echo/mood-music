@@ -15,22 +15,60 @@
    color: white;
 }
 
-a {
-   color: rbg(164,3,31) !important;
-   text-decoration: none;
-   margin: 0 auto;
-}
-
 body{
    background-color: rgb(0,23,31) !important;
 }
 
-h2, form, .links {
-   margin: auto;
+h2 {
+   padding-top: 30px;
+   text-align: center;
 }
 
 input {
    color: black !important;
+}
+
+.three-column-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr) ;
+   margin: 20px;
+
+}
+
+@media (max-width: 1000px) {
+   .three-column-container, aboutus {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 650px) {
+   .three-column-container, aboutus {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+@media (max-width: 450px) {
+   .three-column-container, moods {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+.three-column-item {
+   margin: 30px;
+   display: flex;
+   justify-content: center;
+}
+
+/* ------------Devise------------ */
+
+a {
+   color: white !important;
+   text-decoration: none;
+   margin: 0 auto;
+}
+
+.devise-title, form, .links {
+   margin: auto;
 }
 
 .devise-body {
@@ -50,4 +88,38 @@ input {
 
 .links {
    color: black !important;
+}
+
+/* ------------Navigation------------ */
+
+.navbar {
+   padding-bottom: 0;
+   border-bottom: 2px solid rgb(181, 65, 84);
+}
+
+.nav-logo {
+   font-family: 'Major Mono Display', monospace;
+   font-size: 2.3rem;
+   text-decoration: none;
+}
+
+.nav-link {
+   font-size: 1.1rem;
+}
+
+/* ------------About Us------------ */
+
+.aboutus-description {
+   color: rgb(0,23,31) !important;
+}
+
+.aboutus-icons-bg {
+   background-color:rgb(181, 65, 84) !important;
+   border-radius: 50%;
+   margin: 13px;
+   padding: 14px 8px;
+}
+
+.aboutus-name {
+   color: rgb(181, 65, 84) !important;
 }

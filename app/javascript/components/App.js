@@ -10,7 +10,6 @@ import SongNew from './pages/SongNew'
 import SongEdit from './pages/SongEdit'
 import ProtectedSongIndex from './pages/ProtectedSongIndex'
 import AboutUs from './pages/AboutUs'
-import './App.css'
 
 const App = (props) => {
 
@@ -21,14 +20,14 @@ const App = (props) => {
   }, [])
 
   const readSong = () => {
-    fetch("https://mud-muzik.herokuapp.com/songs")
+    fetch("http://localhost:3000/songs")
     .then(response => response.json())
     .then(payload => setSongs(payload))
     .catch(error => console.log(error))
   }
 
   const createSong = (song) => {
-    fetch("https://mud-muzik.herokuapp.com/songs", {
+    fetch("http://localhost:3000/songs", {
       body: JSON.stringify(song),
       headers: {
         "Content-Type": "application/json"
@@ -41,7 +40,7 @@ const App = (props) => {
   }
 
   const updateSong = (song, id) => {
-    fetch(`https://mud-muzik.herokuapp.com/songs/${id}`, {
+    fetch(`http://localhost:3000/songs/${id}`, {
       body: JSON.stringify(song),
       headers: {
         "Content-Type": "application/json"
@@ -54,7 +53,7 @@ const App = (props) => {
   }
 
   const deleteSong = (id) => {
-    fetch(`https://mud-muzik.herokuapp.com/songs/${id}`, {
+    fetch(`http://localhost:3000/songs/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
