@@ -8,7 +8,7 @@ const ProtectedSongIndex = ({songs, current_user}) => {
 
     return (
     <>
-        <h1>Your Contributed Songs</h1>
+        <h2>Your Contributed Songs</h2>
         <h5>If you don't have any contributions, why not add a song?</h5>
         <div className='three-column-container songs'>
             {filteredSongs?.map((song, index) => {

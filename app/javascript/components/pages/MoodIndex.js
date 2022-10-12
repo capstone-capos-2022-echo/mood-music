@@ -8,7 +8,7 @@ const MoodIndex = ({songs}) => {
 
    return (
       <>
-         <h1>Moods</h1>
+         <h2>Moods</h2>
          <div className='three-column-container moods'>
             {moodsArr?.sort().map((mood, index) =>
                <div className='three-column-item moods'>
