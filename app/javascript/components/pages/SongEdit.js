@@ -27,26 +27,30 @@ const SongEdit = ({songs, updateSong, deleteSong}) => {
 
     return (
         <>
+            
             <h2>Edit {song.title}</h2>
+            <div className='song-edit-form'>
             <img className='card-edit-img' alt="album art" src={song.album_art} />
-            <Form>
-                <FormGroup>
+            </div>
+            <Form className='form-edit'>
+                
+                <FormGroup className='song-edit'>
                     <Label for="title">Song Title</Label>
                     <Input type="text" name="title" placeholder='Song Title' onChange={handleChange} value={currentSong.title}
                     />
                 </FormGroup>
 
-                <FormGroup>
+                <FormGroup className='song-edit'>
                     <Label for="artist">Artist</Label>
                     <Input type="text" name="artist" placeholder='Artist Name' onChange={handleChange} value={currentSong.artist} />
                 </FormGroup>
 
-                <FormGroup>
+                <FormGroup className='song-edit'>
                     <Label for="album">Album</Label>
                     <Input type="text" name="album" placeholder='Album Name' onChange={handleChange} value={currentSong.album} />
                 </FormGroup>
 
-                <FormGroup>
+                <FormGroup className='song-edit'>
                     <Label for="exampleSelect">
                         Select the Song's Mood
                     </Label>
@@ -78,21 +82,23 @@ const SongEdit = ({songs, updateSong, deleteSong}) => {
                     </Input>
                 </FormGroup>
 
-                <FormGroup>
+                <FormGroup className='song-edit'>
                     <Label for="album_art">Album Art</Label>
                     <Input type="url" name="album_art" placeholder='Album Art Image URL' onChange={handleChange} value={currentSong.album_art} />
                 </FormGroup>
 
-                <FormGroup>
+                <FormGroup className='song-edit'>
                     <Label for="song_link">Embed Link to Song</Label>
                     <Input type="url" name="song_link" placeholder='Song URL' onChange={handleChange} value={currentSong.song_link} />
                 </FormGroup>
 
-                <Button onClick={handleUpdate} name="submit">
-                    Update Song
-                </Button>
+                <div className='song-edit-btn'>
+                    <Button onClick={handleUpdate} name="submit">
+                        Update Song
+                    </Button>
 
-                <DeleteConfirmation handleDelete={handleDelete}/>
+                    <DeleteConfirmation handleDelete={handleDelete}/>
+                </div>
             </Form>
 
         </>

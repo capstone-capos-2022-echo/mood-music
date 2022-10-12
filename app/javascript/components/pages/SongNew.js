@@ -28,23 +28,23 @@ const SongNew = ( {createSong} ) => {
   return (
     <>
       <h2>Add a Song</h2>
-      <Form>
-        <FormGroup>
+      <Form className='form-edit'>
+        <FormGroup className='song-edit'>
           <Label for="title">Song Title</Label>
           <Input type="text" name="title" placeholder='Song Title' onChange={handleChange} value={newSong.name} />
         </FormGroup>
 
-        <FormGroup>
+        <FormGroup className='song-edit'>
           <Label for="artist">Artist</Label>
           <Input type="text" name="artist" placeholder='Artist Name' onChange={handleChange} value={newSong.artist} />
         </FormGroup>
 
-        <FormGroup>
+        <FormGroup className='song-edit'>
           <Label for="album">Album</Label>
           <Input type="text" name="album" placeholder='Album Name'onChange={handleChange} value={newSong.album} />
         </FormGroup>
 
-        <FormGroup>
+        <FormGroup className='song-edit'>
           <Label for="exampleSelect">
               Select the Song's Mood
           </Label>
@@ -79,12 +79,12 @@ const SongNew = ( {createSong} ) => {
           </Input>
         </FormGroup>
 
-        <FormGroup>
+        <FormGroup className='song-form'>
           <Label for="album_art">Album Art</Label>
           <Input type="url" name="album_art" placeholder='Album Art Image URL' onChange={handleChange} value={newSong.album_art} />
         </FormGroup>
 
-        <FormGroup>
+        <FormGroup className='song-form'>
           <Label for="song_link">Embed Link to Song</Label>
           <Input type="url" name="song_link" placeholder='Song URL' onChange={handleChange} value={newSong.song_link} />
         </FormGroup>

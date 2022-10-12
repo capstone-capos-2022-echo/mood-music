@@ -123,3 +123,49 @@ a {
 .aboutus-name {
    color: rgb(181, 65, 84) !important;
 }
+
+/* ------------Song New------------ */
+
+.form-new{
+   justify-content: center;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-form{
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+/*-----Song Edit ---- */
+.form-edit{
+   justify-content: center;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-edit{
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-edit-form{
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.song-edit-btn{
+   flex-direction: column;
+   display: flex;
+
+}
