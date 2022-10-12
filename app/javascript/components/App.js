@@ -10,7 +10,6 @@ import SongNew from './pages/SongNew'
 import SongEdit from './pages/SongEdit'
 import ProtectedSongIndex from './pages/ProtectedSongIndex'
 import AboutUs from './pages/AboutUs'
-import './App.css'
 
 const App = (props) => {
 
