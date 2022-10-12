@@ -14,11 +14,17 @@ const Home = () => {
 
    return (
       <>
+      <div>
+         <h2>What are you in the mood for?</h2>
+            <Button href="/moods">
+               Pick A Mood
+            </Button>
+      </div>   
+      
       <div id="tsparticles">
       <Particles 
          options={{
             preset: "seaAnemone",
-            
             particles: {
                move: {
                   speed: 0.5
@@ -27,12 +33,6 @@ const Home = () => {
          }}
          init={particlesInit}
       />
-      </div>
-      <div>
-         <h2>What are you in the mood for?</h2>
-            <Button href="/moods">
-               Pick A Mood
-            </Button>
       </div>
       </>
    )
