@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import { Button, Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap'
-import YoutubeEmbed from '../components/YoutubeEmbed'
+import { Media, Player, controls } from 'react-media-player';
 
 const SongShow = ({songs}) => {
    const { id } = useParams()
    const song = songs?.find(song => song.id === +id)
+   const { PlayPause, MuteUnmute } = controls;
+   const [playing, setPlaying] = useState(false)
 
    return (
       <>
@@ -14,7 +16,17 @@ const SongShow = ({songs}) => {
                Back to Songs
             </Button>
          </NavLink>
-         <YoutubeEmbed songs={songs} embedId={song.song_link} />
+         <Media>
+            <div className="media">
+               <div className="media-player">
+                  <Player src={song.song_link} />
+               </div>
+               <div className="media-controls">
+                  <PlayPause />
+                  <MuteUnmute />
+               </div>
+            </div>
+         </Media>
          <Card style={{width: '18rem'}}>
             <img alt="album art" src={song.album_art}/>
             <CardBody>
