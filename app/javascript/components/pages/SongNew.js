@@ -55,6 +55,9 @@ const SongNew = ( {createSong} ) => {
             onChange={handleChange}
             value={newSong.mood}
           >
+            <placeHolder value="pickMood">
+                Pick Mood
+            </placeHolder>
             <option onChange={handleChange} value="Calm">
                 Calm
             </option>

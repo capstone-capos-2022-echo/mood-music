@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import ParticleBackground from '../components/ParticlesBackground'
 
 const MoodIndex = ({songs}) => {
 
@@ -17,6 +18,9 @@ const MoodIndex = ({songs}) => {
                   </NavLink>
                </div>
             )}
+         </div>
+         <div>
+            <ParticleBackground/>
          </div>
       </>
    )
