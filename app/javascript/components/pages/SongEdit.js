@@ -1,16 +1,16 @@
-import React, { useState }  from 'react'
-import {  Form, FormGroup, Label, Input, Button } from 'reactstrap'
-import {  useNavigate, useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { useNavigate, useParams } from 'react-router-dom'
 import DeleteConfirmation from '../components/DeleteConfirmation'
 
-const SongEdit = ({songs, updateSong, deleteSong}) => {
+const SongEdit = ({ songs, updateSong, deleteSong }) => {
     const { id } = useParams()
     const navigate = useNavigate()
     const song = songs?.find(song => song.id === +id)
-    const [currentSong, setCurrentSong] =useState(song)
+    const [currentSong, setCurrentSong] = useState(song)
 
     const handleChange = (e) => {
-        setCurrentSong({...currentSong, [e.target.name]: e.target.value})
+        setCurrentSong({ ...currentSong, [e.target.name]: e.target.value })
     }
 
     const handleUpdate = () => {
@@ -27,13 +27,13 @@ const SongEdit = ({songs, updateSong, deleteSong}) => {
 
     return (
         <>
-            
+
             <h2>Edit {song.title}</h2>
-            <div className='song-edit-form'>
-            <img className='card-edit-img' alt="album art" src={song.album_art} />
+            <div className='song-edit-img'>
+                <img alt="album art" src={song.album_art} style={{width:"300px", height:"300px"}}/>
             </div>
             <Form className='form-edit'>
-                
+
                 <FormGroup className='song-edit'>
                     <Label for="title">Song Title</Label>
                     <Input type="text" name="title" placeholder='Song Title' onChange={handleChange} value={currentSong.title}
@@ -91,15 +91,13 @@ const SongEdit = ({songs, updateSong, deleteSong}) => {
                     <Label for="song_link">Embed Link to Song</Label>
                     <Input type="url" name="song_link" placeholder='Song URL' onChange={handleChange} value={currentSong.song_link} />
                 </FormGroup>
-
-                <div className='song-edit-btn'>
-                    <Button onClick={handleUpdate} name="submit">
-                        Update Song
-                    </Button>
-
-                    <DeleteConfirmation handleDelete={handleDelete}/>
-                </div>
             </Form>
+            <div className='song-edit-btn'>
+                <Button onClick={handleUpdate} name="submit">
+                    Update Song
+                </Button>
+                <DeleteConfirmation handleDelete={handleDelete} />
+            </div>
 
         </>
     )

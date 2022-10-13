@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 @font-face {
-   font-family:'Major Mono Display';
+   font-family: 'Major Mono Display';
    src: url('MajorMonoDisplay-Regular.ttf');
 }
 
@@ -11,12 +11,13 @@
 }
 
 * {
+   text-align: center;
    font-family: 'Barlow', sans-serif;
    color: white;
 }
 
-body{
-   background-color: rgb(0,23,31) !important;
+body {
+   background-color: rgb(0, 23, 31) !important;
 }
 
 h2 {
@@ -30,25 +31,31 @@ input {
 
 .three-column-container {
    display: grid;
-   grid-template-columns: repeat(3, 1fr) ;
+   grid-template-columns: repeat(3, 1fr);
    margin: 20px;
 
 }
 
 @media (max-width: 1000px) {
-   .three-column-container, aboutus {
+
+   .three-column-container,
+   aboutus {
       grid-template-columns: repeat(2, 1fr);
    }
 }
 
 @media (max-width: 650px) {
-   .three-column-container, aboutus {
+
+   .three-column-container,
+   aboutus {
       grid-template-columns: repeat(1, 1fr);
    }
 }
 
 @media (max-width: 450px) {
-   .three-column-container, moods {
+
+   .three-column-container,
+   moods {
       grid-template-columns: repeat(2, 1fr);
    }
 }
@@ -67,7 +74,9 @@ a {
    margin: 0 auto;
 }
 
-.devise-title, form, .links {
+.devise-title,
+form,
+.links {
    margin: auto;
 }
 
@@ -82,7 +91,9 @@ a {
    border-radius: 25px;
 }
 
-.actions, .field, .links {
+.actions,
+.field,
+.links {
    margin: 15px;
 }
 
@@ -94,7 +105,11 @@ a {
 
 .navbar {
    padding-bottom: 0;
+   padding: 1em 0;
    border-bottom: 2px solid rgb(181, 65, 84);
+   background-color: rgb(0, 23, 31);
+   position: relative;
+   z-index: 100000;
 }
 
 .nav-logo {
@@ -107,14 +122,34 @@ a {
    font-size: 1.1rem;
 }
 
+/* ------------HomePage Animation------------ */
+
+.container {
+   position: relative;
+   z-index: 100;
+}
+
+.particles {
+   position: fixed;
+   width: 100%;
+   z-index: -1000;
+}
+
+.centered-button {
+   padding-top: 90px;
+   text-align: center;
+   justify-content: center;
+
+}
+
 /* ------------About Us------------ */
 
 .aboutus-description {
-   color: rgb(0,23,31) !important;
+   color: rgb(0, 23, 31) !important;
 }
 
 .aboutus-icons-bg {
-   background-color:rgb(181, 65, 84) !important;
+   background-color: rgb(181, 65, 84) !important;
    border-radius: 50%;
    margin: 13px;
    padding: 14px 8px;
@@ -126,7 +161,7 @@ a {
 
 /* ------------Song New------------ */
 
-.form-new{
+.form-new {
    justify-content: center;
    flex-direction: column;
    display: flex;
@@ -134,7 +169,7 @@ a {
    width: 400px !important;
 }
 
-.song-form{
+.song-form {
    flex-direction: column;
    display: flex;
    align-items: center;
@@ -142,7 +177,7 @@ a {
 }
 
 /*-----Song Edit ---- */
-.form-edit{
+.form-edit {
    justify-content: center;
    flex-direction: column;
    display: flex;
@@ -150,22 +185,25 @@ a {
    width: 400px !important;
 }
 
-.song-edit{
+.song-edit {
    flex-direction: column;
    display: flex;
    align-items: center;
    width: 400px !important;
 }
 
-.song-edit-form{
+.song-edit-img {
+   color: black;
    flex-direction: column;
    display: flex;
    align-items: center;
    width: 100%;
+   padding: 20px;
 }
 
-.song-edit-btn{
-   flex-direction: column;
+.song-edit-btn {
+   width: 400px;
    display: flex;
-
+   margin: auto;
+   justify-content: space-between;
 }
