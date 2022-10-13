@@ -27,10 +27,9 @@ const SongEdit = ({ songs, updateSong, deleteSong }) => {
 
     return (
         <>
-
             <h2>Edit {song.title}</h2>
             <div className='song-edit-img'>
-                <img alt="album art" src={song.album_art} style={{width:"300px", height:"300px"}}/>
+                <img alt="album art" src={song.album_art} style={{ width: "300px", height: "300px" }} />
             </div>
             <Form className='form-edit'>
 
