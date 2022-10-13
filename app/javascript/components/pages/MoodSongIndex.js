@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import {Card, CardBody, CardSubtitle, Button, CardTitle} from 'reactstrap'
+import { CardBody, CardText, Button, CardTitle } from 'reactstrap'
+import { AiFillCustomerService } from 'react-icons/ai'
 
 const MoodSongIndex = ({songs}) => {
 
@@ -14,27 +15,31 @@ const MoodSongIndex = ({songs}) => {
                Back to Moods
             </Button>
          </NavLink>
-         <div className='three-column-container songs'>
+         <h2>{mood} Songs</h2>
+         <div className='song-column-container'>
             {filteredMoodSongs?.map((song, index) => {
                return (
-                  <div className='three-column-item songs'>
-                     <Card style={{width: '18rem'}} key={index}>
-                        <img alt="album art" src={song.album_art}/>
-                        <CardBody>
-                           <CardTitle>
+                  <div className='song-item-container'>
+                     <div className='song-column-item'key={index}>
+                        <div className='song-image'>
+                           <img alt="album art" src={song.album_art} style={{width: "175px", height: "175px", borderRadius: "20px"}}/>
+                        </div>
+                        <CardBody className='song-card-body'>
+                           <CardTitle className='mt-1 mb-1' tag="h5">
                               {song.title}
                            </CardTitle>
-                           <CardSubtitle className="mb-2 text-muted" tag="h6">
+                           <CardText className="mb-1 text-light">
                               {song.artist}
-                              <br/>{song.album}
-                           </CardSubtitle>
+                           </CardText>
                            <NavLink to={`/songshow/${song.id}`}>
-                              <Button>
-                                 Song Details
-                              </Button>
+                              <AiFillCustomerService
+                                 title="Listen"
+                                 fill='rgb(181, 65, 84)'
+                                 style={{width: '1.5em', height: '1.5em'}}
+                              />
                            </NavLink>
                         </CardBody>
-                     </Card>
+                     </div>
                   </div>
                )
             })}
