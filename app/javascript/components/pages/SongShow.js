@@ -17,7 +17,7 @@ const SongShow = ({songs, current_user}) => {
                Back to Songs
             </Button>
          </NavLink>
-         {song.user_id === current_user.id? <NavLink to='/songcontributions'><Button>Back to Song Contributions</Button></NavLink> : null}
+         {song.user_id === current_user?.id? <NavLink to='/songcontributions'><Button>Back to Song Contributions</Button></NavLink> : null}
          <Media>
             <div className="media">
                <div className="media-player">
