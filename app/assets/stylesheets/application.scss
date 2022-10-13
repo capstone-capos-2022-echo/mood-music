@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 @font-face {
-   font-family:'Major Mono Display';
+   font-family: 'Major Mono Display';
    src: url('MajorMonoDisplay-Regular.ttf');
 }
 
@@ -11,12 +11,13 @@
 }
 
 * {
+   text-align: center;
    font-family: 'Barlow', sans-serif;
    color: white;
 }
 
-body{
-   background-color: rgb(0,23,31) !important;
+body {
+   background-color: rgb(0, 23, 31) !important;
 }
 
 h2 {
@@ -28,20 +29,34 @@ input {
    color: black !important;
 }
 
+
+.three-column-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin: 20px;
+
+}
+
 @media (max-width: 1000px) {
-   .three-column-container, aboutus {
+
+   .three-column-container,
+   aboutus {
       grid-template-columns: repeat(2, 1fr);
    }
 }
 
 @media (max-width: 650px) {
-   .three-column-container, aboutus {
+
+   .three-column-container,
+   aboutus {
       grid-template-columns: repeat(1, 1fr);
    }
 }
 
 @media (max-width: 450px) {
-   .three-column-container, moods {
+
+   .three-column-container,
+   moods {
       grid-template-columns: repeat(2, 1fr);
    }
 }
@@ -54,7 +69,9 @@ a {
    margin: 0 auto;
 }
 
-.devise-title, form, .links {
+.devise-title,
+form,
+.links {
    margin: auto;
 }
 
@@ -69,7 +86,9 @@ a {
    border-radius: 25px;
 }
 
-.actions, .field, .links {
+.actions,
+.field,
+.links {
    margin: 15px;
 }
 
@@ -83,7 +102,7 @@ a {
    padding-bottom: 0;
    padding: 1em 0;
    border-bottom: 2px solid rgb(181, 65, 84);
-   background-color: rgb(0,23,31);
+   background-color: rgb(0, 23, 31);
    position: relative;
    z-index: 100000;
 }
@@ -121,11 +140,11 @@ a {
 /* ------------About Us------------ */
 
 .aboutus-description {
-   color: rgb(0,23,31) !important;
+   color: rgb(0, 23, 31) !important;
 }
 
 .aboutus-icons-bg {
-   background-color:rgb(181, 65, 84) !important;
+   background-color: rgb(181, 65, 84) !important;
    border-radius: 50%;
    margin: 13px;
    padding: 14px 8px;
@@ -133,6 +152,69 @@ a {
 
 .aboutus-name {
    color: rgb(181, 65, 84) !important;
+}
+
+/* ------------Song New------------ */
+
+.form-new {
+   justify-content: center;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-form {
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+/*-----Song Edit ---- */
+.form-edit {
+   justify-content: center;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-edit {
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-edit-img {
+   color: black;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   padding: 20px;
+}
+
+.song-edit-btn {
+   width: 400px;
+   display: flex;
+   margin: auto;
+   justify-content: space-between;
+}
+
+.modal-title {
+   color: black;
+   text-align: centered;
+}
+
+.modal-header {
+   flex: none;
+}
+
+h-5 {
+   text-align: center;
+
 }
 
 /* ------------Moods------------ */
@@ -233,5 +315,5 @@ a {
 }
 
 .media-play {
-   
+
 }
