@@ -12,7 +12,7 @@ const SongShow = ({songs, current_user}) => {
 
    return (
       <>
-         <NavLink to={`/moods/${song.mood}`}>
+         <NavLink to={`/moods/${song.mood}`} className="back-to-song-btn">
             <Button>
                Back to Songs
             </Button>
