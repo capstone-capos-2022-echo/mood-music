@@ -4,7 +4,6 @@ import {NavLink} from 'react-router-dom'
 
 const Navigation = ({
    logged_in,
-   current_user,
    sign_in_route,
    sign_out_route,
    new_user_route
