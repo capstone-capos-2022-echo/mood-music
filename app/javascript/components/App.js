@@ -68,15 +68,30 @@ const App = (props) => {
       <BrowserRouter>
         <Navigation {...props} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/moods" element={<MoodIndex songs={songs} />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/moods" element={<MoodIndex songs={songs} />} />
+          <Route
+            path="/"
+            element={<Home />} />
+          <Route
+            path="/moods"
+            element={<MoodIndex songs={songs} />} />
+          <Route
+            path="/aboutus"
+            element={<AboutUs />} />
+          <Route
+            path="/moods"
+            element={<MoodIndex songs={songs} />} />
           <Route
             path="/moods/:mood"
             element={<MoodSongIndex songs={songs} />}
           />
-          <Route path="/songshow/:id" element={<SongShow songs={songs} />} />
+          <Route
+            path="/songshow/:id"
+            element={
+            <SongShow
+              songs={songs}
+              {...props}
+            />}
+          />
           <Route
             path="/songnew"
             element={<SongNew createSong={createSong} />}
@@ -95,7 +110,10 @@ const App = (props) => {
               />
             }
           />
-          <Route path="/*" element={<NotFound />} />
+          <Route
+            path="/*"
+            element={<NotFound />}
+          />
         </Routes>
       </BrowserRouter>
   );

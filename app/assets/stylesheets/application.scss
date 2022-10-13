@@ -28,13 +28,6 @@ input {
    color: black !important;
 }
 
-.three-column-container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr) ;
-   margin: 20px;
-
-}
-
 @media (max-width: 1000px) {
    .three-column-container, aboutus {
       grid-template-columns: repeat(2, 1fr);
@@ -51,12 +44,6 @@ input {
    .three-column-container, moods {
       grid-template-columns: repeat(2, 1fr);
    }
-}
-
-.three-column-item {
-   margin: 30px;
-   display: flex;
-   justify-content: center;
 }
 
 /* ------------Devise------------ */
@@ -146,4 +133,72 @@ a {
 
 .aboutus-name {
    color: rgb(181, 65, 84) !important;
+}
+
+/* ------------Moods------------ */
+
+.three-column-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr) ;
+   margin: 20px;
+}
+
+.three-column-item {
+   display: flex;
+   justify-content: center;
+}
+
+
+/* ------------Song Cards------------ */
+
+.song-column-container {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr) ;
+   margin: 20px;
+}
+
+.song-item-container {
+   display: flex;
+   justify-content: center;
+}
+
+.song-column-item {
+   display: flex;
+   flex-direction: column;
+   padding: 17px;
+   margin: 20px;
+   background-color: rgb(33, 48, 63);
+   border-radius: 20px;
+   width: min-content;
+}
+
+.song-column-item:hover {
+   background-color: rgb(60, 90, 120);
+   transition: all 0.2s ease-out;
+}
+
+.song-card-body {
+   margin: 6px;
+}
+
+.song-image {
+   margin: auto;
+}
+
+@media (max-width: 1000px) {
+   .song-column-container {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width: 750px) {
+   .song-column-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 525px) {
+   .song-column-container {
+      grid-template-columns: repeat(1, 1fr);
+   }
 }
