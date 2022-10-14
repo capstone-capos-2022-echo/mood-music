@@ -46,7 +46,7 @@ const SongNew = ({ createSong }) => {
 
         <FormGroup className='song-edit'>
           <Label for="exampleSelect">
-            Select the Song's Mood
+            Mood
           </Label>
           <Input
             id="moodSelect"
@@ -55,9 +55,9 @@ const SongNew = ({ createSong }) => {
             onChange={handleChange}
             value={newSong.mood}
           >
-            <placeHolder value="pickMood">
-              Pick Mood
-            </placeHolder>
+            <option>
+              Select a Mood
+            </option>
             <option onChange={handleChange} value="Calm">
               Calm
             </option>

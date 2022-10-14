@@ -19,10 +19,7 @@ const DeleteConfirmation = ({ handleDelete }) => {
             Delete Song
          </Button>
          <Modal toggle={toggle} isOpen={showModal}>
-            <ModalHeader style={{
-               color: "black",
-               textAlign: "center"
-            }}>Delete Confirmation</ModalHeader>
+            <ModalHeader className='m-auto'>Delete Confirmation</ModalHeader>
             <ModalBody style={{
                color: "black",
                textAlign: "center"
