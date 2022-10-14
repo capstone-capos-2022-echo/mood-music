@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { withMediaProps, Media, Player, controls } from "react-media-player";
 
-const MediaPlayer = ({song, media}) => {
+const MediaPlayer = ({ song, media }) => {
    const {
       CurrentTime,
       Duration,
@@ -12,25 +12,24 @@ const MediaPlayer = ({song, media}) => {
    } = controls;
 
    return (
-      <Media >
-         <div className="media">
-            <div className="media-controls">
-               <div>
-                  <PlayPause />
-               </div>
-               <div>
-                  <MuteUnmute />
-                  <CurrentTime />
+      <>
+         <Media >
+            <div className="media">
+               <div className="media-controls">
+                  <PlayPause className='play-btn'/>
                   <SeekBar />
-                  <Duration />
+                  <p>
+                     <CurrentTime /> / <Duration />
+                  </p>
                   <Volume />
+                  <MuteUnmute className='mute-btn'/>
                </div>
+               {/* <div className="media-player" style={{display:"none"}}>
+                  <Player src={song.song_link} />
+               </div> */}
             </div>
-            <div className="media-player" style={{display:"none"}}>
-               <Player src={song.song_link} />
-            </div>
-         </div>
-      </Media>
+         </Media>
+      </>
    )
 }
 

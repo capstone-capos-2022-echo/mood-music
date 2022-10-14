@@ -37,7 +37,6 @@ input {
 }
 
 @media (max-width: 1000px) {
-
    .three-column-container,
    aboutus {
       grid-template-columns: repeat(2, 1fr);
@@ -45,7 +44,6 @@ input {
 }
 
 @media (max-width: 650px) {
-
    .three-column-container,
    aboutus {
       grid-template-columns: repeat(1, 1fr);
@@ -53,7 +51,6 @@ input {
 }
 
 @media (max-width: 450px) {
-
    .three-column-container,
    moods {
       grid-template-columns: repeat(2, 1fr);
@@ -116,7 +113,7 @@ form,
    font-size: 1.1rem;
 }
 
-/* ------------HomePage Animation------------ */
+/* ------------Home Page Animation------------ */
 
 .container {
    position: relative;
@@ -279,7 +276,7 @@ form,
 .song-show-container {
    display: flex;
    flex-direction: row;
-   margin: 60px;
+   margin: 10vh 15vw;
 }
 
 .song-show-info {
@@ -300,9 +297,15 @@ form,
 /* ------------Media Player------------ */
 
 .media-controls {
-   padding: 50px;
+   margin:  10vh 15vw;
+   display: flex;
+   justify-content: center;
 }
 
-.media-play {
+.play-btn {
 
+}
+
+.mute-btn {
+   
 }
