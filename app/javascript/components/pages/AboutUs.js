@@ -14,9 +14,10 @@ const AboutUs = () => {
                     width: '16rem'
                 }}
                 >
-                    <img
+                    <img 
+                        className="about-photo"
                         alt="Kelly"
-                        src="https://picsum.photos/300/200"
+                        src="../imageassets/kelly-photo.jpg"
                     />
                     <CardBody>
                         <CardTitle tag="h5" className='aboutus-name'>
@@ -52,8 +53,9 @@ const AboutUs = () => {
                 }}
                 >
                     <img
+                        className="about-photo"
                         alt="Sample"
-                        src="https://picsum.photos/300/200"
+                        src="../imageassets/elijah-photo.jpeg"
                     />
                     <CardBody>
                         <CardTitle tag="h5" className='aboutus-name'>
@@ -87,8 +89,9 @@ const AboutUs = () => {
                 }}
                 >
                     <img
+                        className="about-photo"
                         alt="Holden"
-                        src="https://picsum.photos/300/200"
+                        src="../imageassets/holden-photo.jpg"
                     />
                     <CardBody>
                         <CardTitle tag="h5" className='aboutus-name'>
