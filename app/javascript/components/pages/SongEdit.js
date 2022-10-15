@@ -51,7 +51,7 @@ const SongEdit = ({ songs, updateSong, deleteSong }) => {
 
                 <FormGroup className='song-edit'>
                     <Label for="exampleSelect">
-                        Select the Song's Mood
+                        Mood
                     </Label>
                     <Input
                         id="moodSelect"
@@ -60,6 +60,9 @@ const SongEdit = ({ songs, updateSong, deleteSong }) => {
                         onChange={handleChange}
                         value={currentSong.mood}
                     >
+                        <option>
+                            Select a Mood
+                        </option>
                         <option value="Calm">
                             Calm
                         </option>
@@ -92,7 +95,7 @@ const SongEdit = ({ songs, updateSong, deleteSong }) => {
                 </FormGroup>
             </Form>
             <div className='song-edit-btn'>
-                <Button onClick={handleUpdate} name="submit">
+                <Button className="animate-btn draw-border" onClick={handleUpdate} name="submit">
                     Update Song
                 </Button>
                 <DeleteConfirmation handleDelete={handleDelete} />

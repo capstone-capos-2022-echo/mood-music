@@ -46,7 +46,7 @@ const SongNew = ({ createSong }) => {
 
         <FormGroup className='song-edit'>
           <Label for="exampleSelect">
-            Select the Song's Mood
+            Mood
           </Label>
           <Input
             id="moodSelect"
@@ -55,9 +55,9 @@ const SongNew = ({ createSong }) => {
             onChange={handleChange}
             value={newSong.mood}
           >
-            <placeHolder value="pickMood">
-              Pick Mood
-            </placeHolder>
+            <option>
+              Select a Mood
+            </option>
             <option onChange={handleChange} value="Calm">
               Calm
             </option>
@@ -89,7 +89,7 @@ const SongNew = ({ createSong }) => {
           <Input type="url" name="song_link" placeholder='Song URL' onChange={handleChange} value={newSong.song_link} />
         </FormGroup>
 
-        <Button onClick={handleSubmit} name="submit">
+        <Button className="animate-btn draw-border" onClick={handleSubmit} name="submit">
           Add Song
         </Button>
       </Form>
