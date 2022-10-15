@@ -167,7 +167,7 @@ form,
    width: 400px !important;
 }
 
-/*-----Song Edit ---- */
+/* ------------Song Edit------------ */
 .form-edit {
    justify-content: center;
    flex-direction: column;
@@ -271,16 +271,21 @@ form,
    }
 }
 
-/* ------------Song Show------------ */
+/* ------------Song Show / Media Player------------ */
 
 .song-show-container {
    display: flex;
    flex-direction: row;
-   margin: 10vh 15vw;
+   margin: 3em 4em;
+}
+
+.song-show-img {
+   width: 300px;
+   height: 300px;
 }
 
 .song-show-info {
-   padding: 10px 40px;
+   padding: 1em 2em;
 }
 
 .song-show-title {
@@ -294,18 +299,102 @@ form,
    left: 0;
 }
 
-/* ------------Media Player------------ */
+@media (max-width: 600px) {
+   .song-show-container, .media-controls {
+      flex-direction: column;
+   }
+   .song-show-title {
+      min-height: fit-content;
+   }
+   .song-show-img {
+      width: 275px;
+      height: 275px;
+   }
+}
+
+.media {
+   margin: 2.6em 2.4em;
+}
 
 .media-controls {
-   margin:  10vh 15vw;
+   // margin:  10vh 15vw;
    display: flex;
    justify-content: center;
+   align-items: center;
+   gap: 8px;
 }
 
-.play-btn {
-
+.seekbar {
+   width: 100%
 }
 
-.mute-btn {
-   
+.volume {
+   width: 70%;
+}
+
+.song-time {
+   display: flex;
+   flex-direction: row;
+}
+
+@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+   box-shadow: inset 0 0 0 $width $color;
+   color: $color;
+   transition: color $duration $duration/3;
+   position: relative;
+
+   &::before,
+   &::after {
+      border: 0 solid transparent;
+      border-radius: 6px;
+      box-sizing: border-box;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      width: 0; height: 0;
+      #{$vertical}: 0;
+      #{$horizontal}: 0;
+   }
+
+   &::before {
+      $h-side: if($horizontal == 'left', 'right', 'left');
+      border-#{$vertical}-width: $width;
+      border-#{$h-side}-width: $width;
+   }
+
+   &::after {
+      $v-side: if($vertical == 'top', 'bottom', 'top');
+      border-#{$v-side}-width: $width;
+      border-#{$horizontal}-width: $width;
+   }
+
+   &:hover {
+      color: $hover;
+
+      &::before,
+      &::after {
+         border-color: $hover;
+         transition: border-color 0s, width $duration, height $duration;
+         width: 100%;
+         height: 100%;
+      }
+
+      &::before { transition-delay: 0s, 0s, $duration; }
+      &::after { transition-delay: 0s, $duration, 0s; }
+   }
+}
+
+   .draw-border {
+      @include btn-border-drawing(rgb(181, 65, 84), rgb(60, 90, 120), 2px, bottom, right);
+   }
+
+   .animate-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1.5;
+      font: 700 0.8rem 'Roboto Slab', sans-serif;
+      padding: 0.75em 1em;
+      letter-spacing: 0.05rem;
+      border-radius: 6px;
 }

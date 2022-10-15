@@ -95,7 +95,7 @@ const SongEdit = ({ songs, updateSong, deleteSong }) => {
                 </FormGroup>
             </Form>
             <div className='song-edit-btn'>
-                <Button onClick={handleUpdate} name="submit">
+                <Button className="animate-btn draw-border" onClick={handleUpdate} name="submit">
                     Update Song
                 </Button>
                 <DeleteConfirmation handleDelete={handleDelete} />

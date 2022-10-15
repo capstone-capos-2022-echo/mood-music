@@ -12,10 +12,7 @@ const DeleteConfirmation = ({ handleDelete }) => {
 
    return (
       <div>
-         <Button
-            name="submit"
-            onClick={toggle}
-         >
+         <Button className="animate-btn draw-border" name="submit" onClick={toggle} >
             Delete Song
          </Button>
          <Modal toggle={toggle} isOpen={showModal}>

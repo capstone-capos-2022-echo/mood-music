@@ -16,7 +16,7 @@ const SongShow = ({ songs, current_user }) => {
             {song.user_id === current_user?.id ? <NavLink to="/songcontributions"><Button>Back to Song Contributions</Button></NavLink> : null}
          </div>
          <div className="song-show-container">
-            <img alt="album art" src={song.album_art} style={{width:"300px", height:"300px"}}/>
+            <img className="song-show-img" alt="album art" src={song.album_art}/>
             <CardBody className="song-show-info">
                <CardTitle className="mb-2 text-light song-show-title" tag="h1">
                   {song.album}

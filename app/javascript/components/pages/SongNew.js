@@ -89,7 +89,7 @@ const SongNew = ({ createSong }) => {
           <Input type="url" name="song_link" placeholder='Song URL' onChange={handleChange} value={newSong.song_link} />
         </FormGroup>
 
-        <Button onClick={handleSubmit} name="submit">
+        <Button className="animate-btn draw-border" onClick={handleSubmit} name="submit">
           Add Song
         </Button>
       </Form>
