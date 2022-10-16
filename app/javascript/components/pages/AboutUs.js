@@ -66,7 +66,7 @@ const AboutUs = () => {
                             Tech Lead
                         </CardSubtitle>
                         <CardText className='aboutus-description'>
-                        I’m a web developer with a focus on Full Stack applications, but still exploring other technologies that catch my interest! Currently looking into API’s and backend frameworks. If you’re looking for a developer to add to your team, I’d love to hear from you!
+                        I’m a Web Developer with a focus on full stack applications, but still exploring  technologies that catch my interest! Currently working on building projects with API’s and backend frameworks. I enjoy all types of music, especially live. My hobbies include; surfing, hiking, rock climbing, trail running, ultra-runs, mountain biking, and photography.If you’re looking for a developer to add to your team, I’d love to hear from you!
                         </CardText>
                             <span className='aboutus-icons-bg'>
                                 <a href="https://github.com/ElijahBcodes" target="_blank"><AiFillGithub style={{width: "2em", height: "2em"}}/></a>

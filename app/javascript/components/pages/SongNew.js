@@ -55,24 +55,32 @@ const SongNew = ({ createSong }) => {
             onChange={handleChange}
             value={newSong.mood}
           >
+<<<<<<< Updated upstream
             <option>
               Select a Mood
             </option>
+=======
+>>>>>>> Stashed changes
             <option onChange={handleChange} value="Calm">
               Calm
             </option>
+
             <option onChange={handleChange} value="Epic">
               Epic
             </option>
+
             <option onChange={handleChange} value="Fury">
               Fury
             </option>
+
             <option onChange={handleChange} value="Heartbreak">
               Heartbreak
             </option>
+
             <option onChange={handleChange} value="Hype">
               Hype
             </option>
+            
             <option onChange={handleChange} value="Upbeat">
               Upbeat
             </option>
