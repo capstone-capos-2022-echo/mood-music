@@ -240,10 +240,6 @@ form,
    flex: none;
 }
 
-h-5 {
-   text-align: center;
-}
-
 /* ------------Moods------------ */
 
 .three-column-container {
@@ -328,7 +324,7 @@ h-5 {
 }
 
 .song-column-item:hover {
-   background-color: rgb(187, 36, 91);
+   background-color: rgb(60, 90, 120);
    transition: all 0.2s ease-out;
 }
 
@@ -511,11 +507,17 @@ h-5 {
    border-radius: 6px;
 }
 
+/* ------------Not Found------------ */
+
 .not-found {
    text-align: center;
    font-size: 20px;
 }
 
+.notfound-img {
+   max-width: 60%;
+   transform: rotate(90deg);
+}
+
 .back-btn {
-   color: black !important;
 }
