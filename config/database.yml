@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  # database: mood_music_production
-  # username: mood_music
-  # password: <%= ENV["MOOD_MUSIC_DATABASE_PASSWORD"] %>
+  database: mood_music_production
+  username: mood_music
+  password: <%= ENV["MOOD_MUSIC_DATABASE_PASSWORD"] %>
