@@ -11,7 +11,7 @@ const MoodSongIndex = ({songs}) => {
    return (
       <>
          <NavLink to="/moods">
-            <Button className="back-to-mood-button">
+            <Button className="back-to-mood-button" variant="outline-dark">
                <div className="btm-button-text">
                Back to Moods
                </div>

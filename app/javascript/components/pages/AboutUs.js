@@ -15,7 +15,7 @@ const AboutUs = () => {
                 }}
                 >
                     <img 
-                        className="kelly-photo"
+                        className="about-us-images"
                         alt="Kelly"
                         src="../imageassets/kelly-photo.jpg"
                     />
@@ -31,10 +31,10 @@ const AboutUs = () => {
                             Project Manager/Product Manager
                         </CardSubtitle>
                         <CardText className='aboutus-description'>
-                        My name is Kelly, and I’m a full-stack web developer currently based in San Diego, CA. Although I’m currently in San Diego, my roots are in Oakland, CA in the Bay Area! I am a true homebody, so I enjoy staying at home, watching K-dramas, and building things from Pokémon nanoblocks to IKEA furniture to websites! My journey as a software developer has just begun, so join me  and see what I can do!
+                        My name is Kelly, and I’m a full-stack web developer currently based in San Diego, CA. Although I’m currently in San Diego, my roots are in Oakland, CA in the Bay Area! I am a true homebody, so I enjoy staying at home, watching K-dramas, and building things from Pokémon nanoblocks to IKEA furniture to websites! My journey as a software developer has just begun, so join me  and see what I can do!         
                         </CardText>
                         </div>
-                        <div >
+                        <div className="icon-kelly">
                             <span className='aboutus-icons-bg'>
                                 <a href="https://github.com/kellychan56" target="_blank">
                                     <AiFillGithub style={{width: '2em', height: '2em'}} />
@@ -57,7 +57,7 @@ const AboutUs = () => {
                 }}
                 >
                     <img
-                        className="about-photo"
+                        className="about-us-images"
                         alt="Sample"
                         src="../imageassets/elijah-photo.jpeg"
                     />
@@ -93,7 +93,7 @@ const AboutUs = () => {
                 }}
                 >
                     <img
-                        className="about-photo"
+                        className="about-us-images"
                         alt="Holden"
                         src="../imageassets/holden-photo.jpg"
                     />
@@ -110,6 +110,7 @@ const AboutUs = () => {
                         <CardText className='aboutus-description'>
                             Hey! My name is Holden Prine and I'm a full stack developer based out of San Diego, California with a focus in backend and UX. I'm San Diego born and raised and when I'm not writing code I make music, go on hikes, and play unhealthy amounts of Overwatch and Monster Hunter. I'm new in my journey as a developer but love a challenge so if you're looking for a motivated problem solver feel free to connect!
                         </CardText>
+                            <div className="icon-holden">
                             <span className='aboutus-icons-bg'>
                                 <a className='icons' href="https://github.com/holdenprine" target="_blank"><AiFillGithub style={{width: "2em", height: "2em"}}/></a>
                             </span>
@@ -119,6 +120,7 @@ const AboutUs = () => {
                             <span className='aboutus-icons-bg'>
                                 <a href="https://holdenprines-portfolio.netlify.app/" target="_blank"><MdArticle style={{width: "2em", height: "2em"}}/></a>
                             </span>
+                            </div>
                     </CardBody>
                 </Card>
             </div>

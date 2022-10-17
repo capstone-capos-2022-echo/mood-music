@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 @font-face {
-   font-family:'Major Mono Display';
+   font-family: 'Major Mono Display';
    src: url('MajorMonoDisplay-Regular.ttf');
 }
 
@@ -20,8 +20,8 @@
    color: white;
 }
 
-body{
-   background-color: rgb(0,23,31) !important;
+body {
+   background-color: rgb(0, 23, 31) !important;
 }
 
 h2 {
@@ -33,20 +33,31 @@ input {
    color: black !important;
 }
 
+
+.three-column-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin: 20px;
+
+}
+
 @media (max-width: 1000px) {
-   .three-column-container, aboutus {
+   .three-column-container,
+   aboutus {
       grid-template-columns: repeat(2, 1fr);
    }
 }
 
 @media (max-width: 650px) {
-   .three-column-container, aboutus {
+   .three-column-container,
+   aboutus {
       grid-template-columns: repeat(1, 1fr);
    }
 }
 
 @media (max-width: 450px) {
-   .three-column-container, moods {
+   .three-column-container,
+   moods {
       grid-template-columns: repeat(2, 1fr);
    }
 }
@@ -59,7 +70,9 @@ a {
    margin: 0 auto;
 }
 
-.devise-title, form, .links {
+.devise-title,
+form,
+.links {
    margin: auto;
 }
 
@@ -74,7 +87,9 @@ a {
    border-radius: 25px;
 }
 
-.actions, .field, .links {
+.actions,
+.field,
+.links {
    margin: 15px;
 }
 
@@ -88,7 +103,7 @@ a {
    padding-bottom: 0;
    padding: 1em 0;
    border-bottom: 2px solid rgb(181, 65, 84);
-   background-color: rgb(0,23,31);
+   background-color: rgb(0, 23, 31);
    position: relative;
    z-index: 100000;
 }
@@ -103,7 +118,7 @@ a {
    font-size: 1.1rem;
 }
 
-/* ------------Home Page------------ */
+/* ------------Home Page Animation------------ */
 
 .container {
    position: relative;
@@ -160,11 +175,11 @@ a {
 /* ------------About Us------------ */
 
 .aboutus-description {
-   color: rgb(0,23,31) !important;
+   color: rgb(0, 23, 31) !important;
 }
 
 .aboutus-icons-bg {
-   background-color:rgb(181, 65, 84) !important;
+   background-color: rgb(181, 65, 84) !important;
    border-radius: 50%;
    margin: 13px;
    padding: 14px 8px;
@@ -174,17 +189,71 @@ a {
    color: rgb(181, 65, 84) !important;
 }
 
-.about-photo {
+.about-us-images {
+   display: flex;
+   justify-content: center;
    height: 300px;
 }
 
-.kelly-photo {
-   height: 260px;
+.icon-kelly {
+   margin-top: 20px;
 }
 
+.icon-holden {
+   margin-top: 40px;
+}
 
-.kellys-card {
-   margin: 2rem;
+/* ------------Song New------------ */
+
+.form-new {
+   justify-content: center;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-form {
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+/* ------------Song Edit------------ */
+.form-edit {
+   justify-content: center;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-edit {
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 400px !important;
+}
+
+.song-edit-img {
+   color: black;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   padding: 20px;
+}
+
+.song-edit-btn {
+   width: 400px;
+   display: flex;
+   margin: auto;
+   justify-content: space-between;
+}
+
+.modal-title {
+   color: black;
 }
 
 /* ------------Moods------------ */
@@ -277,12 +346,16 @@ button {
 }
 
 .back-to-mood-button {
+   background-color: rgb(181, 65, 84);
+   variant: rgb(181, 65, 84);
    width: 100px;
    height: 60px;
    margin-top: 10px;
    margin-left: 10px;
    text-align: center;
 }
+
+
 
 .btm-button-text {
    text-align: center;
@@ -306,12 +379,130 @@ button {
    }
 }
 
-/* ------------Song Show Elements------------ */
+/* ------------Song Show / Media Player------------ */
 
-.back-to-song-btn {
-   width: 100px;
-   height: 60px;
-   margin-top: 10px;
-   margin-left: 10px;
-   text-align: center;
+.song-show-container {
+   display: flex;
+   flex-direction: row;
+   margin: 3em 4em;
+}
+
+.song-show-img {
+   width: 300px;
+   height: 300px;
+}
+
+.song-show-info {
+   padding: 1em 2em;
+}
+
+.song-show-title {
+   position: relative;
+   min-height: 200px;
+}
+
+.song-show-subtitle {
+   position: relative;
+   bottom: 0;
+   left: 0;
+}
+
+@media (max-width: 600px) {
+   .song-show-container, .media-controls {
+      flex-direction: column;
+   }
+   .song-show-title {
+      min-height: fit-content;
+   }
+   .song-show-img {
+      width: 275px;
+      height: 275px;
+   }
+}
+
+.media {
+   margin: 2.6em 2.4em;
+}
+
+.media-controls {
+   // margin:  10vh 15vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+}
+
+.seekbar {
+   width: 100%
+}
+
+.volume {
+   width: 70%;
+}
+
+.song-time {
+   display: flex;
+   flex-direction: row;
+}
+
+@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+   box-shadow: inset 0 0 0 $width $color;
+   color: $color;
+   transition: color $duration $duration/3;
+   position: relative;
+
+   &::before,
+   &::after {
+      border: 0 solid transparent;
+      border-radius: 6px;
+      box-sizing: border-box;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      width: 0; height: 0;
+      #{$vertical}: 0;
+      #{$horizontal}: 0;
+   }
+
+   &::before {
+      $h-side: if($horizontal == 'left', 'right', 'left');
+      border-#{$vertical}-width: $width;
+      border-#{$h-side}-width: $width;
+   }
+
+   &::after {
+      $v-side: if($vertical == 'top', 'bottom', 'top');
+      border-#{$v-side}-width: $width;
+      border-#{$horizontal}-width: $width;
+   }
+
+   &:hover {
+      color: $hover;
+
+      &::before,
+      &::after {
+         border-color: $hover;
+         transition: border-color 0s, width $duration, height $duration;
+         width: 100%;
+         height: 100%;
+      }
+
+      &::before { transition-delay: 0s, 0s, $duration; }
+      &::after { transition-delay: 0s, $duration, 0s; }
+   }
+}
+
+   .draw-border {
+      @include btn-border-drawing(rgb(181, 65, 84), rgb(60, 90, 120), 2px, bottom, right);
+   }
+
+   .animate-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1.5;
+      font: 700 0.8rem 'Roboto Slab', sans-serif;
+      padding: 0.75em 1em;
+      letter-spacing: 0.05rem;
+      border-radius: 6px;
 }
