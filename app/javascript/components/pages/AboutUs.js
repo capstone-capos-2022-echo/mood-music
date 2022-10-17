@@ -7,14 +7,14 @@ const AboutUs = () => {
   return (
     <div>
         <h2>The dream team behind it all...</h2>
-        <div className='three-column-container aboutus'>
-            <div className='three-column-item aboutus'>
+        <div className='three-column-container'>
+            <div className='three-column-item'>
                 <Card
                 style={{
                     width: '16rem'
                 }}
                 >
-                    <img 
+                    <img
                         className="about-us-images"
                         alt="Kelly"
                         src="../imageassets/kelly-photo.jpg"
@@ -31,7 +31,7 @@ const AboutUs = () => {
                             Project Manager/Product Manager
                         </CardSubtitle>
                         <CardText className='aboutus-description'>
-                        My name is Kelly, and I’m a full-stack web developer currently based in San Diego, CA. Although I’m currently in San Diego, my roots are in Oakland, CA in the Bay Area! I am a true homebody, so I enjoy staying at home, watching K-dramas, and building things from Pokémon nanoblocks to IKEA furniture to websites! My journey as a software developer has just begun, so join me  and see what I can do!         
+                        My name is Kelly, and I’m a full-stack web developer currently based in San Diego, CA. Although I’m currently in San Diego, my roots are in Oakland, CA in the Bay Area! I am a true homebody, so I enjoy staying at home, watching K-dramas, and building things from Pokémon nanoblocks to IKEA furniture to websites! My journey as a software developer has just begun, so join me  and see what I can do!
                         </CardText>
                         </div>
                         <div className="icon-kelly">
@@ -50,7 +50,7 @@ const AboutUs = () => {
                     </CardBody>
                 </Card>
             </div>
-            <div className='three-column-item aboutus'>
+            <div className='three-column-item'>
                 <Card
                 style={{
                     width: '16rem'
@@ -86,14 +86,14 @@ const AboutUs = () => {
                     </CardBody>
                 </Card>
             </div>
-            <div className='three-column-item aboutus'>
+            <div className='three-column-item'>
                 <Card
                 style={{
                     width: '16rem'
                 }}
                 >
                     <img
-                        className="about-us-images"
+                        className="about-us-images2"
                         alt="Holden"
                         src="../imageassets/holden-photo.jpg"
                     />

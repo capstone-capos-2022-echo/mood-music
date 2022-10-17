@@ -13,7 +13,7 @@ const SongShow = ({ songs, current_user }) => {
             <NavLink to={`/moods/${song.mood}`}>
                <Button className="back-to-mood-button">Back to Songs</Button>
             </NavLink>
-            {song.user_id === current_user?.id ? <NavLink to="/songcontributions"><Button>Back to Song Contributions</Button></NavLink> : null}
+            {song.user_id === current_user?.id ? <NavLink to="/songcontributions"><Button className="back-to-mood-button">Back to Song Contributions</Button></NavLink> : null}
          </div>
          <div className="song-show-container">
             <img className="song-show-img" alt="album art" src={song.album_art}/>
