@@ -1,21 +1,27 @@
 import React from "react";
-import { Button } from "reactstrap";
-import { loadSeaAnemonePreset } from "tsparticles-preset-sea-anemone";
-import Particles from "react-tsparticles";
-import { curvesPathName } from "tsparticles-path-curves";
 import ParticlesBackground from "../components/ParticlesBackground";
+import { NavLink } from "react-router-dom";
+
 
 const Home = () => {
-//   function particlesInit(tsParticles) {
-//     console.log("init", tsParticles);
-//     loadSeaAnemonePreset(tsParticles);
-//   }
-
   return (
     <div className="container">
       <div className="centered-button">
+        <p style={{
+          fontFamily: "Major Mono Display, monospace",
+          fontSize: "6.3rem"
+        }}>Müd Müzik</p>
         <h2>What are you in the mood for?</h2>
-        <Button href="/moods">Pick A Mood</Button>
+        {/* <Button href="/moods">Pick A Mood</Button> */}
+        <div className="home-btn-container">
+          <NavLink to="/moods">
+            <div className="home-btn">
+              <p className="the-home-text">
+                Pick A Mood
+              </p>
+            </div>
+          </NavLink>
+        </div>
       </div>
       <ParticlesBackground />
     </div>

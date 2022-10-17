@@ -10,7 +10,7 @@ const ProtectedSongIndex = ({songs, current_user}) => {
     return (
     <>
         <h2>Your Contributed Songs</h2>
-        {filteredSongs.length > 0 ? null : <h5>If you don't have any contributions, why not add a song?</h5>}
+        {filteredSongs.length > 0 ? null : <h4>If you don't have any contributions, why not add a song?</h4>}
         <div className='song-column-container'>
             {filteredSongs?.map((song, index) => {
                 return (

@@ -10,6 +10,11 @@
    src: url('Barlow-Light.ttf');
 }
 
+@font-face {
+   font-family: 'Bungee Shade';
+   src: url('BungeeShade-Regular.ttf');
+}
+
 * {
    font-family: 'Barlow', sans-serif;
    color: white;
@@ -20,41 +25,17 @@ body {
 }
 
 h2 {
-   padding-top: 30px;
+   margin-top: 30px;
    text-align: center;
+}
+
+h4 {
+   display: flex;
+   justify-content: center;
 }
 
 input {
    color: black !important;
-}
-
-
-.three-column-container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   margin: 20px;
-
-}
-
-@media (max-width: 1000px) {
-   .three-column-container,
-   aboutus {
-      grid-template-columns: repeat(2, 1fr);
-   }
-}
-
-@media (max-width: 650px) {
-   .three-column-container,
-   aboutus {
-      grid-template-columns: repeat(1, 1fr);
-   }
-}
-
-@media (max-width: 450px) {
-   .three-column-container,
-   moods {
-      grid-template-columns: repeat(2, 1fr);
-   }
 }
 
 /* ------------Devise------------ */
@@ -133,6 +114,40 @@ form,
 
 }
 
+.home-btn {
+   margin: -0.1rem;
+}
+
+.home-btn {
+   margin: 20px;
+   border: 2px solid;
+   border-color: rgb(181, 65, 84);
+   border-radius: 1rem;
+   overflow: hidden;
+   justify-content: center;
+   // width: 40%;
+   // height: 70%;
+}
+
+.home-btn:hover {
+   background-color: rgb(181, 65, 84);
+   transition: all 0.4s ease-out;
+}
+
+.home-btn-container {
+   display: flex;
+   justify-content: center;
+}
+
+.the-home-text {
+   font-family: 'Bungee Shade', cursive;
+   font-size: 2.2rem;
+   text-align: center;
+   vertical-align: middle;
+   margin: 1rem;
+}
+
+
 /* ------------About Us------------ */
 
 .aboutus-description {
@@ -148,6 +163,23 @@ form,
 
 .aboutus-name {
    color: rgb(181, 65, 84) !important;
+}
+
+.about-us-images {
+   height: 300px;
+   object-fit: cover;
+}
+
+.about-us-images2 {
+   height: 300px;
+}
+
+.icon-kelly {
+   margin-top: 20px;
+}
+
+.icon-holden {
+   margin-top: 40px;
 }
 
 /* ------------Song New------------ */
@@ -207,15 +239,61 @@ form,
 
 .three-column-container {
    display: grid;
-   grid-template-columns: repeat(3, 1fr) ;
+   grid-template-columns: repeat(3, 1fr);
    margin: 20px;
+
 }
 
 .three-column-item {
    display: flex;
    justify-content: center;
+   margin: 70px;
 }
 
+@media (max-width: 1000px) {
+   .three-column-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 650px) {
+   .three-column-container {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+.mood-btn {
+   margin: -0.1rem;
+}
+
+.mood-btn-container {
+   border: 1px solid transparent;
+   border-radius: 1rem;
+   overflow: hidden;
+   height: 80px;
+}
+
+.title-container {
+   background:rgb(181, 65, 84);
+   border: 1px solid transparent;
+   border-radius: 1rem;
+   overflow: hidden;
+   padding: 1rem;
+   height: 80%;
+}
+
+.mood-btn-container:hover {
+   background-color: rgb(181, 65, 84);
+   transition: all 0.4s ease-out;
+}
+
+.the-mood-text {
+   font-family: 'Bungee Shade', cursive;
+   font-size: 2.2rem;
+   text-align: center;
+   vertical-align: middle;
+   margin: 1rem;
+}
 
 /* ------------Song Cards------------ */
 
@@ -251,6 +329,19 @@ form,
 
 .song-image {
    margin: auto;
+}
+
+.back-to-mood-button {
+   background-color: rgb(181, 65, 84);
+   variant: rgb(181, 65, 84);
+   margin: 15px;
+   text-align: center;
+}
+
+
+
+.btm-button-text {
+   text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -313,7 +404,8 @@ form,
 }
 
 .media {
-   margin: 2.6em 2.4em;
+   display: flex;
+   justify-content: center;
 }
 
 .media-controls {
@@ -321,15 +413,17 @@ form,
    display: flex;
    justify-content: center;
    align-items: center;
+   margin: 2.6em 2.4em;
    gap: 8px;
+   width: 75%;
 }
 
 .seekbar {
-   width: 100%
+   width: 100%;
 }
 
 .volume {
-   width: 70%;
+   width: 100px;
 }
 
 .song-time {
