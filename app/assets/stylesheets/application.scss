@@ -125,8 +125,6 @@ form,
    border-radius: 1rem;
    overflow: hidden;
    justify-content: center;
-   // width: 40%;
-   // height: 70%;
 }
 
 .home-btn:hover {
@@ -145,6 +143,11 @@ form,
    text-align: center;
    vertical-align: middle;
    margin: 1rem;
+}
+
+.animate__fadeInUp{
+   // animation: fade;
+   animation-duration: 2.5s;
 }
 
 
