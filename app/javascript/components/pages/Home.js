@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="centered-button">
-        <p style={{
+        <p className ="animate__fadeInUp" style={{
           fontFamily: "Major Mono Display, monospace",
           fontSize: "6.3rem"
         }}>Müd Müzik</p>
