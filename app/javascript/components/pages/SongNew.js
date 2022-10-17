@@ -61,18 +61,23 @@ const SongNew = ({ createSong }) => {
             <option onChange={handleChange} value="Calm">
               Calm
             </option>
+
             <option onChange={handleChange} value="Epic">
               Epic
             </option>
+
             <option onChange={handleChange} value="Fury">
               Fury
             </option>
+
             <option onChange={handleChange} value="Heartbreak">
               Heartbreak
             </option>
+
             <option onChange={handleChange} value="Hype">
               Hype
             </option>
+
             <option onChange={handleChange} value="Upbeat">
               Upbeat
             </option>
