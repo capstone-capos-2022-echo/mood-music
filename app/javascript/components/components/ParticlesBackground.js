@@ -54,11 +54,11 @@ const ParticleBackground = () => {
                     min: 1,
                     max: 4,
                 },
-                // direction: MoveDirection.top,
-                // outModes: {
-                //     default: OutMode.destroy,
-                //     bottom: OutMode.none,
-                // },
+                direction: "top",
+                outModes: {
+                    default: "destroy",
+                    bottom: "none",
+                },
             },
         },
         detectRetina: true,
