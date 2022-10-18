@@ -1,6 +1,7 @@
 import React from "react";
 import ParticlesBackground from "../components/ParticlesBackground";
 import { NavLink } from "react-router-dom";
+import "animate.css";
 
 
 const Home = () => {
