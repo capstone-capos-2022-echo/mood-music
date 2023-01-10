@@ -13,7 +13,7 @@ const Home = () => {
           fontSize: "6.3rem"
         }}>Müd Müzik</p>
         <h2>What are you in the mood for?</h2>
-        {/* <Button href="/moods">Pick A Mood</Button> */}
+        <Button href="/moods">Pick A Mood</Button>
         <div className="home-btn-container">
           <NavLink to="/moods">
             <div className="home-btn">
