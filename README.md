@@ -1,3 +1,4 @@
+![Screen Shot 2022-12-22 at 1 51 14 PM](https://user-images.githubusercontent.com/51147388/211485522-af82ff6a-8177-449d-bab0-8012fd266770.png)
 # 🎶 Müd Müzik 🎶
 Welcome to Müd Müzik! With all the choices you make throughout the day, let us reduce your decision fatigue by picking out great music depending on your mood. Whether you are looking to study, workout, rock or just chill, Müd Müzik will curate your listening experience. Choose the mood you're in, and we'll give you a playlist of songs that you can listen to! Our app is user friendly and customizable, allowing you to pick mood playlists, add new songs to the playlist, and listen to quality audio based on your preferences.
 
