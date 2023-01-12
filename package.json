@@ -3,7 +3,8 @@
   "description": "a music/media player app",
   "version": "1.0.0",
   "engines": {
-    "node": "19.2.0"
+    "node": "16.18.0",
+    "npm": "8.19.2"
   },
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
