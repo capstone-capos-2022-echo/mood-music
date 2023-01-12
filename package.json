@@ -1,11 +1,10 @@
 {
   "name": "Mud-Muzik",
   "description": "a music/media player app",
-  "version": "1.0.0",
+  "version": "1.22.19",
   "engines": {
     "node": "16.18.0",
-    "npm": "8.19.2", 
-    "yarn": "1.0.0"
+    "npm": "8.19.2"
   },
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
